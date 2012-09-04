@@ -41,9 +41,22 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'available'); ?>
-		<?php echo $form->textField($model,'available'); ?>
+		<?php echo $form->dropDownList($model,'available', $model->getAvailableOptions()); ?>
 		<?php echo $form->error($model,'available'); ?>
 	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'created_at'); ?>
+		<?php echo $form->textField($model,'created_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'updated_at'); ?>
+		<?php echo $form->textField($model,'updated_at'); ?>
+	</div>
+
+
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

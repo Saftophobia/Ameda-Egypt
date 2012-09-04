@@ -10,12 +10,18 @@
  * @property string $picture_path
  * @property integer $price
  * @property integer $available
+ * @property string $created_at
+ * @property string $updated_at
+ *
  *
  * The followings are the available model relations:
  * @property User $user
  */
 class Product extends CActiveRecord
 {
+	const TYPE_available_at_stores = 1;
+	const TYPE_out_of_stock = 0;
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -45,7 +51,7 @@ class Product extends CActiveRecord
 			array('user_id, name, price', 'required'),
 			array('user_id, price, available', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
-			array('picture_path', 'safe'),
+			array('picture_path, created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, user_id, name, picture_path, price, available', 'safe', 'on'=>'search'),
@@ -75,6 +81,8 @@ class Product extends CActiveRecord
 			'name' => 'Name',
 			'picture_path' => 'Picture Path',
 			'price' => 'Price',
+			'created_at' => 'Created At',
+			'updated_at' => 'Updated At',
 			'available' => 'Available',
 		);
 	}
@@ -95,10 +103,21 @@ class Product extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('picture_path',$this->picture_path,true);
 		$criteria->compare('price',$this->price);
+		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('updated_at',$this->updated_at,true);
 		$criteria->compare('available',$this->available);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+
+	public function getAvailableOptions()
+	{
+		return array(
+		self::TYPE_available_at_stores=>'Available at stores',
+		self::TYPE_out_of_stock=>'Out of stock',
+		);
 	}
 }

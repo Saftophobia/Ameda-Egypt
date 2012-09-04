@@ -27,5 +27,7 @@ $this->menu=array(
 		'picture_path',
 		'price',
 		'available',
+		'created_at',
+		'updated_at',
 	),
 )); ?>

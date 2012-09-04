@@ -11,6 +11,8 @@ class m120901_103723_create_tbl_products extends CDbMigration
 			'picture_path'=>'text',
 			'price'=>'integer(32) not null',
 			'available'=>'boolean default false',
+			'created_at'=>'datetime',
+			'updated_at'=>'datetime',
 			));
 	}
 
