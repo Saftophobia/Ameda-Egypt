@@ -21,7 +21,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=breastfeeding_dev',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123123123',
 			'charset' => 'utf8',
 		),
 
@@ -29,7 +29,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=breastfeeding_test',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123123123',
 			'charset' => 'utf8',
 		),
 		

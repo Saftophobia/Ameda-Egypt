@@ -58,15 +58,16 @@
 	</div>
 
 	<div class="row">
+	<?php echo $form->label($model,'password_repeat'); ?>
+	<?php echo $form->passwordField($model,'password_repeat',array('size'=>60,'maxlength'=>100)); ?>
+	<?php echo $form->error($model,'password_repeat'); ?>
+	</div>
+
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'dob'); ?>
 		<?php echo $form->textField($model,'dob'); ?>
 		<?php echo $form->error($model,'dob'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_joined'); ?>
-		<?php echo $form->textField($model,'date_joined'); ?>
-		<?php echo $form->error($model,'date_joined'); ?>
 	</div>
 
 	<div class="row">
