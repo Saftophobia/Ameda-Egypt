@@ -545,3 +545,42 @@ Stack trace:
 #12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/yiic(4): require_once('/Applications/X...')
 #13 {main}
 ---
+2012/09/05 18:43:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varchar(64) not null,
+	`type` int(11) not null,
+	`description` text,
+	`bizrule` ' at line 2. The SQL statement executed was: CREATE TABLE `AuthItem` (
+	`name` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY varchar(64) not null,
+	`type` int(11) not null,
+	`description` text,
+	`bizrule` text,
+	`data` text
+).
+2012/09/05 18:43:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varchar(64) not null,
+	`type` int(11) not null,
+	`description` text,
+	`bizrule` ' at line 2. The SQL statement executed was: CREATE TABLE `AuthItem` (
+	`name` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY varchar(64) not null,
+	`type` int(11) not null,
+	`description` text,
+	`bizrule` text,
+	`data` text
+)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php(1251): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbMigration.php(229): CDbCommand->createTable('AuthItem', Array, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/migrations/m120905_153235_create_authorization.php(12): CDbMigration->createTable('AuthItem', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/cli/commands/MigrateCommand.php(386): m120905_153235_create_authorization->up()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/cli/commands/MigrateCommand.php(110): MigrateCommand->migrateUp('m120905_153235_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/console/CConsoleCommand.php(173): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/console/CConsoleCommandRunner.php(68): CConsoleCommand->run(Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CConsoleApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/yiic.php(34): CApplication->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/yiic.php(7): require_once('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/yiic(4): require_once('/Applications/X...')
+#13 {main}
+---
+2012/09/05 18:51:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
+2012/09/05 18:53:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
+2012/09/05 19:17:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.

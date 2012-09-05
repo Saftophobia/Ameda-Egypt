@@ -27,6 +27,7 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		'admin',
 		
 	),
 
@@ -60,6 +61,11 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
+		'authManager'=>array(
+			'class'=>'CDbAuthManager',
+			'connectionID'=>'db',
+			),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

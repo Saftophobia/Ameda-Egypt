@@ -8,8 +8,11 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
 );
+if(Yii::app()->user->checkAccess('admin'))
+{
+	array_push($this->menu,array('label'=>'Manage User', 'url'=>array('admin')));
+}
 ?>
 
 <h1>Users</h1>

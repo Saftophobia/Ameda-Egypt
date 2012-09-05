@@ -9,8 +9,13 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
 );
+
+if(Yii::app()->user->checkAccess('admin'))
+{
+	array_push($this->menu,array('label'=>'List User', 'url'=>array('index')));
+	
+}
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

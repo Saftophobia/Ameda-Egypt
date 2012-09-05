@@ -28,11 +28,11 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('@'),
+				'actions'=>array('create'),
+				'users'=>array('?'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('view','update','index',),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -110,6 +110,10 @@ class UserController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -122,6 +126,10 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$dataProvider=new CActiveDataProvider('User');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
