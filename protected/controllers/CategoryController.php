@@ -32,12 +32,8 @@ class CategoryController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,6 +58,10 @@ class CategoryController extends Controller
 	 */
 	public function actionCreate()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=new Category;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -86,6 +86,10 @@ class CategoryController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -110,6 +114,10 @@ class CategoryController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -133,6 +141,10 @@ class CategoryController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=new Category('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Category']))
@@ -168,4 +180,5 @@ class CategoryController extends Controller
 			Yii::app()->end();
 		}
 	}
+
 }

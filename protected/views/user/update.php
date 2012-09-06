@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create User', 'url'=>array('create')),
 	array('label'=>'View User', 'url'=>array('view', 'id'=>$model->id)),
 );
 if(Yii::app()->user->checkAccess('admin'))

@@ -7,9 +7,7 @@ $this->breadcrumbs=array(
 	'Manage',
 );
 
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-);
+$this->menu=array();
 
 if(Yii::app()->user->checkAccess('admin'))
 {

@@ -10,6 +10,11 @@ $this->menu=array(
 	array('label'=>'Create Category', 'url'=>array('create')),
 	array('label'=>'Manage Category', 'url'=>array('admin')),
 );
+if(Yii::app()->user->checkAccess('admin'))
+{
+	array_push($this->menu,array('label'=>'Create Category', 'url'=>array('create')));
+	array_push($this->menu,	array('label'=>'Manage Category', 'url'=>array('admin')));
+}
 ?>
 
 <h1>Categories</h1>

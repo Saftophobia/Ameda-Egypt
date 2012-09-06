@@ -33,11 +33,6 @@
 	<?php echo CHtml::encode($data->username); ?>
 	<br />
 
-	<?php echo CHtml::link('Block', array('view', 'id'=>$data->id)); ?>
-	
-	<?php echo CHtml::link('Remove', array('view', 'id'=>$data->id)); ?>
-	<br />
-
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>
