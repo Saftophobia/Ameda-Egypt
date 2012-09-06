@@ -1,0 +1,58 @@
+#create repo in the current directory
+- git init
+
+#downloads a clean copy of the project from the repo
+#(same as checkout in svn)
+- git clone <url>
+
+#updates the local repo
+- git pull <url>
+
+#versions the file (must be done before every commit)
+- git add <file name>
+
+#deletes a file
+- git rm <file_name>
+
+#commits the file to the local repo
+- git commit -m 'log msg'
+
+#pushes the commited file from the local to the remote repo
+- git push <url>
+
+#increases the buffer size for the commits
+- git config http.postBuffer 524288000
+
+
+**********************************************BranchingCommands********************************************
+
+#shows all the working branches
+- git branch
+
+#creates a new local branch
+- git branch <new_name>
+
+#deletes the local branch
+- git branch -d <branch_name>
+
+#switches from the current local branch to another
+- git checkout <branch_name>
+
+#pushes the local branch to a remote branch
+- git push <url> <local_branch_name>
+
+#deletes the remote branch
+- git push <url> <:local_branch_name>
+
+#merges the current branch a specific branch
+- git merge <branch_name>
+
+#allows pushing to your current branch only
+- git config push.default current
+
+
+****************************************************Notes**************************************************
+
+1- create your own branch and update it from the master branch always.
+2- don't merge the master branch with yours unless yours has no bugs.
+3- EXECUTE THE LAST COMMAND IN BOTH SECTIONS BEFORE STARTING ANYTHING.
