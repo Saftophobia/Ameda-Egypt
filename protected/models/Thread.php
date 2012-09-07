@@ -27,8 +27,7 @@ class Thread extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-h	
+	}	
 	/**
 	 * @return string the associated database table name
 	 */

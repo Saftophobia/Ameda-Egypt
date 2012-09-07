@@ -58,7 +58,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=breastfeeding_dev',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '3161914',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 
