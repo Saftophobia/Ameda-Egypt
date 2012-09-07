@@ -70,6 +70,9 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
+			$model->created_at=new CDbExpression('NOW()');
+			$model->updated_at=new CDbExpression('NOW()');
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -98,6 +101,7 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
+			$model->updated_at=new CDbExpression('NOW()');
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
