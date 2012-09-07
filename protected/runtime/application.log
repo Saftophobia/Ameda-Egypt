@@ -584,3 +584,860 @@ Stack trace:
 2012/09/05 18:51:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
 2012/09/05 18:53:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
 2012/09/05 19:17:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'breastfeeding_dev.tbl_migration' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_migration`.
+2012/09/07 09:04:26 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:04:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /var/www/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /var/www/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Product))
+#7 /var/www/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Product')
+#8 /var/www/yii/bf/protected/controllers/ProductController.php(125): CActiveDataProvider->__construct('Product')
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#19 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#20 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /var/www/yii/bf/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:04:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /var/www/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /var/www/yii/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Product))
+#7 /var/www/yii/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Product')
+#8 /var/www/yii/bf/protected/controllers/ProductController.php(125): CActiveDataProvider->__construct('Product')
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#19 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#20 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /var/www/yii/bf/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:06:06 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:06:13 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:06:24 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:06:33 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('Product')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=Product
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:07:10 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:07:20 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:07:25 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:07:28 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:07:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "create" was not found.' in /var/www/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /var/www/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('create')
+#1 /var/www/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /var/www/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('page')
+#6 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/page')
+#7 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /var/www/yii/bf/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/page&view=create
+---
+2012/09/07 09:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "create/thread" was not found.' in /var/www/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /var/www/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('create/thread')
+#1 /var/www/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /var/www/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('page')
+#6 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/page')
+#7 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /var/www/yii/bf/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/page&view=create/thread
+---
+2012/09/07 09:11:35 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:11:58 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+---
+2012/09/07 09:12:03 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:05 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:06 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:06 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:06 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:07 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:07 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii/bf/index.php
+---
+2012/09/07 09:13:12 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:31 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:32 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:32 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:32 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:32 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:32 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:13:33 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/web/CClientScript.php(463): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CClientScript.php(500): CClientScript->getCoreScriptUrl()
+#4 /var/www/yii/framework/web/CClientScript.php(316): CClientScript->getPackageBaseUrl('jquery')
+#5 /var/www/yii/framework/web/CClientScript.php(209): CClientScript->renderCoreScripts()
+#6 /var/www/yii/framework/web/CController.php(352): CClientScript->render('<!DOCTYPE html ...')
+#7 /var/www/yii/framework/web/CController.php(789): CController->processOutput('<!DOCTYPE html ...')
+#8 /var/www/yii/bf/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#10 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('contact')
+#14 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/contact')
+#15 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/yii/bf/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/bf/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:14:40 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/yii/bf/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/yii/bf...')
+#1 /var/www/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/yii/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/yii/fr...')
+#3 /var/www/yii/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/yii/bf/protected/views/product/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(127): require('/var/www/yii/bf...')
+#7 /var/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/yii/bf...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/yii/bf...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/yii/bf/protected/controllers/ProductController.php(128): CController->render('index', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(50): ProductController->actionIndex()
+#12 /var/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#21 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('product/index')
+#22 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /var/www/yii/bf/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii/bf/index.php?r=product/index
+HTTP_REFERER=http://localhost/yii/bf/index.php?r=site/page&view=about
+---
+2012/09/07 09:19:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw ".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw ')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw ')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw ...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw%20/view&id=1
+---
+2012/09/07 09:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw ".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw ')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw ')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw ...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw%20/view&id=0
+---
+2012/09/07 09:19:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw ".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw ')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw ')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw ...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw%20/
+---
+2012/09/07 09:19:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r=thread/indexAw /view".' in /var/www/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('r=thread/indexA...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/yii/bf/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/bf/index.php?r=r=thread/indexAw%20/view&id=
+---
+2012/09/07 09:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r=thread/indexAw/view".' in /var/www/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('r=thread/indexA...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/yii/bf/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/bf/index.php?r=r=thread/indexAw/view&id=
+---
+2012/09/07 09:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r=thread/indexAw/view".' in /var/www/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('r=thread/indexA...')
+#1 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/yii/bf/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/bf/index.php?r=r=thread/indexAw/view&id=1
+---
+2012/09/07 09:20:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw/...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw/view&id=1
+---
+2012/09/07 09:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw ".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw ')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw ')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw ...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw%20/view&id=1
+---
+2012/09/07 09:20:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw/...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw/view&id=1
+---
+2012/09/07 09:21:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexAw".' in /var/www/yii/framework/web/CController.php:484
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(271): CController->missingAction('indexAw')
+#1 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('indexAw')
+#2 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/indexAw/...')
+#3 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/yii/bf/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/indexAw/view&id=1
+---
+2012/09/07 09:22:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yii/framework/web/CController.php:337
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#10 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/yii/bf/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/bf/index.php?r=thread/view
+---
