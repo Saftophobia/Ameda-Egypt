@@ -28,7 +28,7 @@ class Thread extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+h	
 	/**
 	 * @return string the associated database table name
 	 */
@@ -51,7 +51,7 @@ class Thread extends CActiveRecord
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, category_id, title, created_at, updated_at, content', 'safe', 'on'=>'search'),
+			array('id, user_id, category_id, title, created_at, updated_at, content, locked', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,6 +82,7 @@ class Thread extends CActiveRecord
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 			'content' => 'Content',
+			'locked' => 'Locked',
 		);
 	}
 
@@ -103,6 +104,7 @@ class Thread extends CActiveRecord
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
 		$criteria->compare('content',$this->content,true);
+		$criteria->compare('locked',$this->locked,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -115,3 +117,4 @@ class Thread extends CActiveRecord
 		return CHtml::listData($categories,'id', 'name');
 	}
 }
+

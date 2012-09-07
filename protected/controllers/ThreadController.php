@@ -78,6 +78,8 @@ class ThreadController extends Controller
 		));
 	}
 
+
+
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -105,6 +107,24 @@ class ThreadController extends Controller
 			'model'=>$model,
 		));
 	}
+
+	public function actionLock($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+		
+		$model->locked=true;
+		if($model->save())
+			$this->redirect(array('view','id'=>$model->id));
+		
+
+		$this->render('index',array(
+			'model'=>$model,
+		));
+	}
+
 
 	/**
 	 * Deletes a particular model.
