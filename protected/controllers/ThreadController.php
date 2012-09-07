@@ -107,7 +107,10 @@ class ThreadController extends Controller
 	public function actionLock($id)
 	{
 		$model=$this->loadModel($id);
-
+		if(!(Yii::app()->user->checkAccess('admin')||Yii::app()->user->id==$model->user_id))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}	
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		
