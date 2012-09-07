@@ -32,12 +32,8 @@ class UserController extends Controller
 				'users'=>array('?'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('view','update','index',),
+				'actions'=>array('view','update','index','admin','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -86,6 +82,10 @@ class UserController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		if(Yii::app()->user->id!==$id)
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -141,6 +141,10 @@ class UserController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=new User('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))

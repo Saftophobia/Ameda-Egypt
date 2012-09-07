@@ -9,7 +9,12 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'product-form',
 	'enableAjaxValidation'=>false,
-)); ?>
+	//'htmlOptions' => array(
+      //  'enctype' => 'multipart/form-data'),
+
+)); 
+	
+	?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -29,9 +34,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'picture_path'); ?>
-		<?php echo $form->textArea($model,'picture_path',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo CHtml::activeFileField($model, 'picture_path');?>
 		<?php echo $form->error($model,'picture_path'); ?>
 	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'price'); ?>
@@ -45,15 +51,7 @@
 		<?php echo $form->error($model,'available'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'created_at'); ?>
-		<?php echo $form->textField($model,'created_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'updated_at'); ?>
-		<?php echo $form->textField($model,'updated_at'); ?>
-	</div>
+	
 
 
 

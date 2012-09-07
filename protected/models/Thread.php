@@ -110,4 +110,11 @@ h
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getCategoryNames()
+	{
+		$categories=Category::model()->findAll();
+		return CHtml::listData($categories,'id', 'name');
+	}
 }
+

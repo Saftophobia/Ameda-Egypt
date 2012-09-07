@@ -15,8 +15,11 @@ $this->beginWidget('zii.widgets.CPortlet', array(
                    'title'=>'Operations',
 		           ));
 $this->menu=array(
-	array('label'=>'Manage Users', 'url'=>array('/user/index')),
-	array('label'=>'Manage Admins', 'url'=>array('manageAdmins')),
+	array('label'=>'Manage Users', 'url'=>array('/user/admin')),
+	array('label'=>'Manage Threads', 'url'=>array('/thread/admin')),
+	array('label'=>'Manage Products', 'url'=>array('/product/admin')),
+	array('label'=>'Manage Categories', 'url'=>array('/category/admin')),
+	
 );
 $this->widget('zii.widgets.CMenu', array(
                     'items'=>$this->menu,

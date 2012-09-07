@@ -8,13 +8,20 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Thread', 'url'=>array('index')),
 	array('label'=>'Create Thread', 'url'=>array('create')),
 	array('label'=>'Update Thread', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete Thread', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Lock Thread', 'url'=>'#', 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')),
 	array('label'=>'Manage Thread', 'url'=>array('admin')),
 );
+
+if(Yii::app()->user->checkAccess('admin'))
+{
+	array_push($this->menu,array('label'=>'List Thread', 'url'=>array('index')));
+	array_push($this->menu,array('label'=>'Update Thread', 'url'=>array('update', 'id'=>$model->id)));
+	array_push($this->menu,array('label'=>'Delete Thread', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')));
+	array_push($this->menu,	array('label'=>'Manage Thread', 'url'=>array('admin')));
+}
 ?>
 
 <h1>View Thread #<?php echo $model->id; ?></h1>

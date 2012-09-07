@@ -8,8 +8,11 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Comment', 'url'=>array('create')),
-	array('label'=>'Manage Comment', 'url'=>array('admin')),
 );
+if(Yii::app()->user->checkAccess('admin'))
+{
+	array_push($this->menu,	array('label'=>'Manage Comment', 'url'=>array('admin')));
+}
 ?>
 
 <h1>Comments</h1>

@@ -32,12 +32,8 @@ class ProductController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete'),
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,6 +58,10 @@ class ProductController extends Controller
 	 */
 	public function actionCreate()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=new Product;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -70,6 +70,9 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
+			$model->created_at=new CDbExpression('NOW()');
+			$model->updated_at=new CDbExpression('NOW()');
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -86,6 +89,10 @@ class ProductController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -94,6 +101,7 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
+			$model->updated_at=new CDbExpression('NOW()');
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -110,6 +118,10 @@ class ProductController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -122,6 +134,7 @@ class ProductController extends Controller
 	 */
 	public function actionIndex()
 	{
+
 		$dataProvider=new CActiveDataProvider('Product');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -133,6 +146,10 @@ class ProductController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		if(!Yii::app()->user->checkAccess('admin'))
+		{
+			throw new CHttpException(403,'You are not authorized to perform this action.');
+		}
 		$model=new Product('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Product']))

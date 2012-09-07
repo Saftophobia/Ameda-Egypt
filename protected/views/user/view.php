@@ -7,11 +7,11 @@ $this->breadcrumbs=array(
 	$model->id,
 );
 
-$this->menu=array(
-	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)),
-);
-
+$this->menu=array();
+if(Yii::app()->user->id==$model->id)
+{
+	array_push($this->menu,array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)));
+}
 if(Yii::app()->user->checkAccess('admin'))
 {
 
