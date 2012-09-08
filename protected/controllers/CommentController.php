@@ -17,7 +17,7 @@ class CommentController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-			'threadContext - view',
+			'threadContext + create,admin',
 		);
 	}
 
@@ -137,6 +137,7 @@ class CommentController extends Controller
 		}
 		$model=new Comment('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->thread_id=$this->_thread->id;
 		if(isset($_GET['Comment']))
 			$model->attributes=$_GET['Comment'];
 

@@ -2860,3 +2860,311 @@ Stack trace:
 REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=13
 HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
 ---
+2012/09/08 20:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(271): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:25:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=admin
+---
+2012/09/08 20:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=admin
+---
+2012/09/08 20:27:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('update')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/update')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/update&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:27:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('update')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/update')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/update&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1117): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterPostOnly(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('delete')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/delete')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread%2Fdelete&id=2&ajax=thread-grid
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/breastfeeding/index.php?r=admin/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:42:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('update')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/update')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/update&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin&cid=3
+---
+2012/09/08 20:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin&cid=3
+---
+2012/09/08 20:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin&cid=3
+---
+2012/09/08 20:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin&cid=3
+---
+2012/09/08 20:47:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/admin
+---
+2012/09/08 20:53:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:217
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=3
+---
+2012/09/08 20:53:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:217
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---

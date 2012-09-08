@@ -13,7 +13,7 @@ $this->menu=array(
 if(Yii::app()->user->checkAccess('admin'))
 {
 	array_push($this->menu,array('label'=>'Create Category', 'url'=>array('create')));
-	array_push($this->menu,	array('label'=>'Manage Category', 'url'=>array('admin')));
+	array_push($this->menu,	array('label'=>'Manage Threads', 'url'=>array('/thread/admin','cid'=>$model->id)));
 }
 array_push($this->menu,array('label'=>'Create Thread', 
                              'url'=>array('thread/create','cid'=>$model->id)));

@@ -3,7 +3,7 @@
 /* @var $model Comment */
 
 $this->breadcrumbs=array(
-	'Comments'=>array('index'),
+	'Admin'=>array('/admin/default/index'),
 	'Manage',
 );
 
@@ -46,7 +46,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'user_id',
-		'thread_id',
 		'content',
 		array(
 			'class'=>'CButtonColumn',

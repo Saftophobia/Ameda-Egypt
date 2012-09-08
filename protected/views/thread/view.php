@@ -3,7 +3,8 @@
 /* @var $model Thread */
 
 $this->breadcrumbs=array(
-	'Threads'=>array('index'),
+	'Category'=>array('/category/index'),
+	Category::model()->findByPk($model->id)->name,
 	$model->title,
 );
 $cid=Thread::model()->findByPk($model->id)->category_id;

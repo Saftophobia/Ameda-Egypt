@@ -104,6 +104,8 @@ class Thread extends CActiveRecord
 		$criteria->compare('updated_at',$this->updated_at,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('locked',$this->locked,true);
+		$criteria->condition='category_id=:category_id';
+		$criteria->params=array(':category_id'=>$this->category_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

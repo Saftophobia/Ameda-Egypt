@@ -17,7 +17,7 @@ class ThreadController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
-			'categoryContext',
+			'categoryContext + create,admin',
 		);
 	}
 
@@ -167,6 +167,7 @@ class ThreadController extends Controller
 		}
 		$model=new Thread('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->category_id=$this->_category->id;
 		if(isset($_GET['Thread']))
 			$model->attributes=$_GET['Thread'];
 
