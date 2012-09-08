@@ -44,7 +44,7 @@ class Thread extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, category_id, title, content', 'required'),
+			array('title, content', 'required'),
 			array('user_id, category_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>200),
 			array('created_at, updated_at', 'safe'),

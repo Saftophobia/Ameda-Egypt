@@ -21,14 +21,6 @@ array_push($this->menu,array('label'=>'Create Thread',
 
 <h1><?php echo $model->name; ?> Category </h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'name',
-		'user_id',
-	),
-)); ?>
 
 <br> <h1>Related Threads</h1>
 <?php $this->widget('zii.widgets.CListView', array( 'dataProvider'=>$threadDataProvider, 'itemView'=>'/thread/_view',

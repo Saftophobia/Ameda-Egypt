@@ -10,4 +10,4 @@ $this->breadcrumbs=array(
 
 <h1>Create Thread</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_formCreate', array('model'=>$model)); ?>

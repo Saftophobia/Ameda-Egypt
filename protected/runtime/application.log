@@ -2591,3 +2591,272 @@ Stack trace:
 REQUEST_URI=/breastfeeding/index.php?r=thread/index&cid=1
 HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3
 ---
+2012/09/08 19:57:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:57:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 19:57:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:57:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:00:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 20:00:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:02:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 20:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 20:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 20:06:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 20:06:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:07:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 20:07:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:12:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (81)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (206)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 20:12:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_thread` (`user_id`, `created_at`, `updated_at`, `title`, `content`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1012): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(791): CActiveRecord->insert(NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(81): CActiveRecord->save()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): ThreadController->actionCreate()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(206): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:13:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=13
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 20:13:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=13
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
