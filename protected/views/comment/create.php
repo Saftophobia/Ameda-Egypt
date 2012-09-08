@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Comment', 'url'=>array('index')),
 );
 if(Yii::app()->user->checkAccess('admin'))
 {

@@ -7,6 +7,7 @@ class CommentController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	private $_thread=null;
 
 	/**
 	 * @return array action filters
@@ -16,6 +17,7 @@ class CommentController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'threadContext - view',
 		);
 	}
 
@@ -66,8 +68,10 @@ class CommentController extends Controller
 		if(isset($_POST['Comment']))
 		{
 			$model->attributes=$_POST['Comment'];
+			$model->user_id=Yii::app()->user->id;
+			$model->thread_id=$this->_thread->id;
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('/thread/view','id'=>$model->thread_id,'cid'=>Thread::model()->findByPk($model->thread_id)->category_id));
 		}
 
 		$this->render('create',array(
@@ -121,16 +125,6 @@ class CommentController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Comment');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
 
 	/**
 	 * Manages all models.
@@ -162,6 +156,38 @@ class CommentController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	}
+
+	public function filterThreadContext($filterChain)
+	{
+		$threadId=null;
+		if(isset($_GET['tid']))
+		{
+			$threadId=$_GET['tid'];
+		}
+		else
+		{
+			if(isset($_POST[tid]))
+			{
+				$threadId=$_POST['tid'];
+			}
+		}
+		$this->loadThread($threadId);
+		$filterChain->run();
+	}
+
+	protected function loadThread($thread_id)
+	{
+		if($this->_thread === null)
+		{
+			$this->_thread=Thread::model()->findByPk($thread_id);
+			if($this->_thread===null)
+			{
+				throw new CHttpException(404,'The requested thread does not exist.');
+			}
+		}
+
+		return $this->_thread;
 	}
 
 	/**

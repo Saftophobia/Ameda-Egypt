@@ -7,12 +7,10 @@ $this->breadcrumbs=array(
 	$model->title=>array('view','id'=>$model->id),
 	'Update',
 );
-
+$cid=Thread::model()->findByPk($model->id)->category_id;
 $this->menu=array(
-	array('label'=>'List Thread', 'url'=>array('index')),
-	array('label'=>'Create Thread', 'url'=>array('create')),
-	array('label'=>'View Thread', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Thread', 'url'=>array('admin')),
+	array('label'=>'Create Thread', 'url'=>array('create','cid'=>$cid)),
+	array('label'=>'View Thread', 'url'=>array('view', 'id'=>$model->id,'cid'=>$cid)),
 );
 ?>
 

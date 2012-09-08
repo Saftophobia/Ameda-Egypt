@@ -6,10 +6,9 @@ $this->breadcrumbs=array(
 	'Threads'=>array('index'),
 	'Manage',
 );
-
+$cid=Thread::model()->findByPk($model->id)->category_id;
 $this->menu=array(
-	array('label'=>'List Thread', 'url'=>array('index')),
-	array('label'=>'Create Thread', 'url'=>array('create')),
+	array('label'=>'Create Thread', 'url'=>array('create','cid'=>$cid)),
 );
 
 Yii::app()->clientScript->registerScript('search', "

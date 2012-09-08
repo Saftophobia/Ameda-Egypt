@@ -1224,3 +1224,1370 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/breastfeeding/index.php?r=thread
 ---
+2012/09/08 16:19:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:112
+Stack trace:
+#0 [internal function]: ThreadController->actionLock('3')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ThreadController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ThreadController), Object(ReflectionMethod), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('lock')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/lock')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/lock&id=3
+---
+2012/09/08 17:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread
+---
+2012/09/08 17:56:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index
+---
+2012/09/08 17:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/index&cid=1
+---
+2012/09/08 17:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/index&cid=1
+---
+2012/09/08 18:01:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 18:01:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 18:06:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/index&cid=1
+---
+2012/09/08 18:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:216
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(205): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=2
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/index&cid=1
+---
+2012/09/08 18:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 18:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 18:35:04 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(9): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:35:06 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(9): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:36:23 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(9): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:39:31 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:39:32 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:40:12 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:40:13 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:40:14 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:42:29 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController.model" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(10): CComponent->__get('model')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:42:41 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:44:58 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 18:52:30 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController._category" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/_view.php(16): CComponent->__get('_category')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(131): require('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CListView.php(273): CBaseController->renderFile('/Applications/X...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(161): CListView->renderItems()
+#5 [internal function]: CBaseListView->renderSection(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(174): CBaseListView->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/category/view.php(35): CBaseController->widget('zii.widgets.CLi...', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(62): CController->render('view', Array)
+#15 [internal function]: CategoryController->actionView('1')
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#27 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#28 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#29 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/index
+---
+2012/09/08 18:53:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=5
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/create&cid=1
+---
+2012/09/08 19:03:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:03:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=1
+---
+2012/09/08 19:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=1
+---
+2012/09/08 19:04:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:04:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:04:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:06:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
+---
+2012/09/08 19:07:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3
+---
+2012/09/08 19:07:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3&cid=1
+---
+2012/09/08 19:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php:177
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(53): CategoryController->loadModel('3')
+#1 [internal function]: CategoryController->actionView('3')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/view')
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&cid=3&id=1
+---
+2012/09/08 19:09:27 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:09:38 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:09:45 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:09:56 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:10:14 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:10:15 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=3
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:10:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "views/thread/view".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('views/thread/vi...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/breastfeeding/index.php?r=views/thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&cid=3&id=1
+---
+2012/09/08 19:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "views/thread/view".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('views/thread/vi...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/breastfeeding/index.php?r=views/thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&cid=3&id=1
+---
+2012/09/08 19:10:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "views/thread/view".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('views/thread/vi...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/breastfeeding/index.php?r=views/thread/view&id=3
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&cid=3&id=1
+---
+2012/09/08 19:10:29 [error] [php] include(CActiveDataProvier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:11:44 [error] [php] include(CActiveDataProvdier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:11:45 [error] [php] include(CActiveDataProvdier.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(48): spl_autoload_call()
+#1 unknown(0): ThreadController->actionView()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): ThreadController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterAccessControl()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): ThreadController->runActionWithFilters()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): ThreadController->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CWebApplication->run()
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php (48)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 19:16:02 [error] [exception.CException] exception 'CException' with message 'Property "Thread.Title" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Title')
+#1 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/views/thread/view.php(32): CActiveRecord->__get('Title')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(60): CController->render('view', Array)
+#7 [internal function]: ThreadController->actionView('4')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ThreadController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ThreadController), Object(ReflectionMethod), Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/view')
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/view&id=4
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&cid=3&id=1
+---
+2012/09/08 19:27:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/admin&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested thread does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php:196
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php(185): CommentController->loadThread(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterThreadContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('comment/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=comment/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:30:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested thread does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php:196
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php(185): CommentController->loadThread(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterThreadContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('comment/admin')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=comment/admin
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:30:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory('')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/create&cid=
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:30:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3&cid=1
+---
+2012/09/08 19:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested category does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php:226
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/ThreadController.php(215): ThreadController->loadCategory(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): ThreadController->filterCategoryContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=6
+---
+2012/09/08 19:35:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested thread does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php:196
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php(185): CommentController->loadThread(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterThreadContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('comment/index')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=comment/index
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=comment/admin&tid=3
+---
+2012/09/08 19:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested thread does not exist.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php:196
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CommentController.php(185): CommentController->loadThread(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterThreadContext(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('comment/create')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=comment/create
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=comment/admin&tid=3
+---
+2012/09/08 19:39:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(271): CController->missingAction('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('thread/index')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/breastfeeding/index.php?r=thread/index&cid=1
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=thread/view&id=3
+---

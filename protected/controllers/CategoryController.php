@@ -47,8 +47,18 @@ class CategoryController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$threadDataProvider=new CActiveDataProvider('Thread',array(
+			'criteria'=>array(
+				'condition'=>'category_id=:category_id',
+				'params'=>array(':category_id'=>$this->loadModel($id)->id),
+				),
+			'pagination'=>array('pageSize'=>10),
+			)
+			);
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'threadDataProvider'=>$threadDataProvider,
 		));
 	}
 
@@ -168,6 +178,7 @@ class CategoryController extends Controller
 		return $model;
 	}
 
+	
 	/**
 	 * Performs the AJAX validation.
 	 * @param CModel the model to be validated

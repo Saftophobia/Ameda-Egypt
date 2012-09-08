@@ -5,14 +5,10 @@
 $this->breadcrumbs=array(
 	'Threads',
 );
-
+$cid=Thread::model()->findByPk($model->id)->category_id;
 $this->menu=array(
-	array('label'=>'Create Thread', 'url'=>array('create')),
+	array('label'=>'Create Thread', 'url'=>array('create','cid'=>$cid)),
 );
-if(Yii::app()->user->checkAccess('admin'))
-{
-	array_push($this->menu,array('label'=>'Manage Thread', 'url'=>array('admin')));
-}
 ?>
 
 <h1>Threads</h1>

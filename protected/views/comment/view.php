@@ -8,13 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Comment', 'url'=>array('index')),
 	array('label'=>'Create Comment', 'url'=>array('create')),
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Update Comment', 'url'=>array('update', 'id'=>$model->id)));
-	array_push($this->menu,array('label'=>'Delete Comment', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')));
 	array_push($this->menu,	array('label'=>'Manage Comment', 'url'=>array('admin')));
 }
 ?>

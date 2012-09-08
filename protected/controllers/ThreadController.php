@@ -7,6 +7,7 @@ class ThreadController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	public $_category=null;
 
 	/**
 	 * @return array action filters
@@ -16,6 +17,7 @@ class ThreadController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'categoryContext - view',
 		);
 	}
 
@@ -43,8 +45,18 @@ class ThreadController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$commentDataProvider=new CActiveDataProvider('Comment',array(
+			'criteria'=>array(
+				'condition'=>'thread_id=:thread_id',
+				'params'=>array(':thread_id'=>$this->loadModel($id)->id),
+				),
+			'pagination'=>array('pageSize'=>10),
+				));
+
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'commentDataProvider'=>$commentDataProvider,
 		));
 	}
 
@@ -144,17 +156,6 @@ class ThreadController extends Controller
 	}
 
 	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Thread');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
@@ -184,6 +185,38 @@ class ThreadController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	}
+
+	public function filterCategoryContext($filterChain)
+	{
+		$categoryId=null;
+		if(isset($_GET['cid']))
+		{
+			$categoryId=$_GET['cid'];
+		}
+		else
+		{
+			if(isset($_POST['cid']))
+			{
+				$categoryId=$_POST['cid'];
+			}
+		}
+		$this->loadCategory($categoryId);
+		$filterChain->run();
+	}
+
+	protected function loadCategory($category_id)
+	{
+		if($this->_category===null)
+		{
+			$this->_category=Category::model()->findByPk($category_id);
+			if($this->_category===null)
+			{
+				throw new CHttpException(404,'The requested category does not exist.');
+			}
+		}
+
+		return $this->_category;
 	}
 
 	/**
