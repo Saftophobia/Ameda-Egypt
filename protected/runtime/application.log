@@ -3168,3 +3168,51 @@ Stack trace:
 REQUEST_URI=/breastfeeding/index.php?r=thread/admin
 HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/view&id=1
 ---
+2012/09/08 21:08:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_category` WHERE `tbl_category`.`id`=1.
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php (132)
+in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php (13)
+2012/09/08 21:08:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`breastfeeding_dev`.`tbl_thread`, CONSTRAINT `category_id_thread` FOREIGN KEY (`category_id`) REFERENCES `tbl_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `tbl_category` WHERE `tbl_category`.`id`=1' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1734): CDbCommand->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1157): CActiveRecord->deleteByPk('1')
+#2 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/CategoryController.php(132): CActiveRecord->delete()
+#3 [internal function]: CategoryController->actionDelete('1')
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1117): CFilterChain->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterPostOnly(Object(CFilterChain))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('delete')
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('category/delete')
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/breastfeeding/index.php?r=category%2Fdelete&id=1&ajax=category-grid
+HTTP_REFERER=http://localhost/breastfeeding/index.php?r=category/admin
+---
+2012/09/09 14:13:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/protected/controllers/UserController.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): UserController->actionIndex()
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('')
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('user')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Applications/XAMPP/xamppfiles/htdocs/breastfeeding/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/breastfeeding/index.php?r=user
+---
