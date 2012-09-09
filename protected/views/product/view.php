@@ -31,3 +31,6 @@ if(Yii::app()->user->checkAccess('admin'))
 		'updated_at',
 	),
 )); ?>
+
+<?php echo CHtml::image('images/'.$model->picture_path,"Product's image ",array("width"=>200)); ?>
+

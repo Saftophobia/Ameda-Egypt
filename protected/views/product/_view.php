@@ -17,10 +17,6 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('picture_path')); ?>:</b>
-	<?php echo CHtml::encode($data->picture_path); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
 	<br />
@@ -36,7 +32,9 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_at')); ?>:</b>
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />
-
+	
+	<?php echo CHtml::image('images/'.$data->picture_path," No image available",array("width"=>200)); ?>
+	<br />
 
 
 </div>
