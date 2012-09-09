@@ -107,7 +107,7 @@ class ThreadController extends Controller
 
 		if(isset($_POST['Thread']))
 		{
-			$model->id=($_POST['Thread'])['id'];
+			$model->id=($_POST['Thread'])['content'];
 			$model->updated_at=time();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
