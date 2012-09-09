@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Category'=>array('/category/index'),
-	Category::model()->findByPk($model->id)->name,
+	Category::model()->findByPk($model->category_id)->name,
 	$model->title,
 );
 $cid=Thread::model()->findByPk($model->id)->category_id;
