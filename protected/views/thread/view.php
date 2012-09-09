@@ -22,7 +22,7 @@ else
 {
 	if(Yii::app()->user->id == $model->user_id)
 	{
-			array_push($this->menu,array('label'=>'Lock Thread', 'url'=>array('#','cid'=>$this->_category->id), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
+			array_push($this->menu,array('label'=>'Lock Thread', 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
 	}
 }
 ?>
