@@ -13,19 +13,15 @@ $this->menu=array(
 if(Yii::app()->user->checkAccess('admin'))
 {
 	array_push($this->menu,array('label'=>'Create Category', 'url'=>array('create')));
-	array_push($this->menu,array('label'=>'Update Category', 'url'=>array('update', 'id'=>$model->id)));
-	array_push($this->menu,array('label'=>'Delete Category', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')));
-	array_push($this->menu,	array('label'=>'Manage Category', 'url'=>array('admin')));
+	array_push($this->menu,	array('label'=>'Manage Threads', 'url'=>array('/thread/admin','cid'=>$model->id)));
 }
+array_push($this->menu,array('label'=>'Create Thread', 
+                             'url'=>array('thread/create','cid'=>$model->id)));
 ?>
 
-<h1>View Category #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->name; ?> Category </h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'name',
-		'user_id',
-	),
+
+<br> <h1>Related Threads</h1>
+<?php $this->widget('zii.widgets.CListView', array( 'dataProvider'=>$threadDataProvider, 'itemView'=>'/thread/_view',
 )); ?>

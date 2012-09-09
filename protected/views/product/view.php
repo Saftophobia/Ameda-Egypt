@@ -13,9 +13,6 @@ $this->menu=array(
 if(Yii::app()->user->checkAccess('admin'))
 {
 	array_push($this->menu,array('label'=>'Create Product', 'url'=>array('create')));
-	array_push($this->menu,array('label'=>'Update Product', 'url'=>array('update', 'id'=>$model->id)));
-	array_push($this->menu,array('label'=>'Delete Product', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')));
-	array_push($this->menu,	array('label'=>'Manage Product', 'url'=>array('admin')));
 }
 ?>
 

@@ -35,6 +35,7 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact'),
 				            'visible'=>!Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Products', 'url'=>array('/product/index')),
+				array('label'=>'Forum', 'url'=>array('/category/index')),
 				array('label'=>'Register', 'url'=>array('/user/create'),
 				                'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Admin', 'url'=>array('/admin'),
@@ -53,7 +54,8 @@
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
-
+         <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
+         <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> TeraSoft.<br/>
 		All Rights Reserved.<br/>

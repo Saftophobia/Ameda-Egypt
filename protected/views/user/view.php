@@ -12,12 +12,6 @@ if(Yii::app()->user->id==$model->id)
 {
 	array_push($this->menu,array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)));
 }
-if(Yii::app()->user->checkAccess('admin'))
-{
-
-	array_push($this->menu,array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')));
-
-}
 ?>
 
 <h1>View User #<?php echo $model->id; ?></h1>

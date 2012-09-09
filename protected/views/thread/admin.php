@@ -3,15 +3,9 @@
 /* @var $model Thread */
 
 $this->breadcrumbs=array(
-	'Threads'=>array('index'),
+	'Admin'=>array('/admin/default/index'),
 	'Manage',
 );
-
-$this->menu=array(
-	array('label'=>'List Thread', 'url'=>array('index')),
-	array('label'=>'Create Thread', 'url'=>array('create')),
-);
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -47,7 +41,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'user_id',
-		'category_id',
 		'title',
 		'created_at',
 		'updated_at',

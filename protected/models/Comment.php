@@ -90,6 +90,8 @@ class Comment extends CActiveRecord
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('thread_id',$this->thread_id);
 		$criteria->compare('content',$this->content,true);
+		$criteria->condition="thread_id=:thread_id";
+		$criteria->params=array(':thread_id'=>$this->thread_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

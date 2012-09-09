@@ -69,6 +69,7 @@ class ProductController extends Controller
 
 		if(isset($_POST['Product']))
 		{
+			$model->user_id=Yii::app()->user->id;
 			$model->attributes=$_POST['Product'];
 			$model->created_at=new CDbExpression('NOW()');
 			$model->updated_at=new CDbExpression('NOW()');

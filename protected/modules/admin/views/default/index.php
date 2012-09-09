@@ -16,7 +16,6 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 		           ));
 $this->menu=array(
 	array('label'=>'Manage Users', 'url'=>array('/user/admin')),
-	array('label'=>'Manage Threads', 'url'=>array('/thread/admin')),
 	array('label'=>'Manage Products', 'url'=>array('/product/admin')),
 	array('label'=>'Manage Categories', 'url'=>array('/category/admin')),
 	
