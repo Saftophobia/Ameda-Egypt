@@ -1,0 +1,11 @@
+2012/09/09 13:46:32 [error] [php] include(Controller.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /var/www/yii/bf/protected/controllers/SiteController.php(4): spl_autoload_call()
+#1 /var/www/yii/framework/web/CWebApplication.php(355): require()
+#2 /var/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#3 /var/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /var/www/yii/bf/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/bf/index.php
+in /var/www/yii/bf/protected/controllers/SiteController.php (4)
+in /var/www/yii/bf/index.php (13)
