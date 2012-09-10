@@ -80,6 +80,7 @@ class Product extends CActiveRecord
 			'user_id' => 'User',
 			'name' => 'Name',
 			'picture_path' => 'Picture Path',
+			'video_path' => 'Video Path',
 			'price' => 'Price',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
