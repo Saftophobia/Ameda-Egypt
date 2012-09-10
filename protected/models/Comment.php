@@ -8,6 +8,7 @@
  * @property integer $user_id
  * @property integer $thread_id
  * @property string $content
+ * @property string $created_at
  *
  * The followings are the available model relations:
  * @property Thread $thread

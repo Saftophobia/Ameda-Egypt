@@ -70,6 +70,7 @@ class CommentController extends Controller
 			$model->attributes=$_POST['Comment'];
 			$model->user_id=Yii::app()->user->id;
 			$model->thread_id=$this->_thread->id;
+			$model->created_at=new CDbExpression('Now()');
 			if($model->save())
 				$this->redirect(array('/thread/view','id'=>$model->thread_id,'cid'=>Thread::model()->findByPk($model->thread_id)->category_id));
 		}

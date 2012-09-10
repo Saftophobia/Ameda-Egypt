@@ -11,7 +11,7 @@
  * @property string $created_at
  * @property string $updated_at
  * @property string $content
- *
+ * @property bit $locked
  * The followings are the available model relations:
  * @property Comment[] $comments
  * @property Category $category

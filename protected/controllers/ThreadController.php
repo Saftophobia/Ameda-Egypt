@@ -74,8 +74,8 @@ class ThreadController extends Controller
 		if(isset($_POST['Thread']))
 		{
 			$model->user_id=Yii::app()->user->id;
-			$model->created_at=time();
-			$model->updated_at=time();
+			$model->created_at=new CDbExpression('Now()');
+			$model->updated_at=new CDbExpression('Now()');
 			$model->attributes=$_POST['Thread'];
 			$model->category_id=$this->_category->id;
 			if($model->save())
@@ -108,7 +108,7 @@ class ThreadController extends Controller
 		if(isset($_POST['Thread']))
 		{
 			$model->attributes=$_POST['Thread'];
-			$model->updated_at=time();
+			$model->updated_at=new CDbExpression('Now()');
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -128,7 +128,7 @@ class ThreadController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		
-		$model->locked=true;
+		$model->locked=1;
 		if($model->save())
 			$this->redirect(array('view','id'=>$model->id));
 		
