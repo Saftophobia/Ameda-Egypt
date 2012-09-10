@@ -32,6 +32,11 @@
 		<?php echo $form->error($model,'picture_path'); ?>
 	</div>
 	
+	<div class="row">
+		<?php echo $form->labelEx($model,'video_path'); ?>
+		<?php echo $form->textField($model,'video_path'); ?>
+		<?php echo $form->error($model,'video_path'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'price'); ?>
