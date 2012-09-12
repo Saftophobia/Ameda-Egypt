@@ -25,6 +25,7 @@ if(Yii::app()->user->checkAccess('admin'))
 		'user_id',
 		'name',
 		'picture_path',
+		'video_path',
 		'price',
 		'available',
 		'created_at',
