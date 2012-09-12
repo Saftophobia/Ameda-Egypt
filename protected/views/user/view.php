@@ -19,14 +19,11 @@ if(Yii::app()->user->id==$model->id)
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
-		'info',
+		'username',
 		'first_name',
 		'last_name',
 		'email',
-		'confirmed_email',
-		'username',
-		'password',
+		'info',
 		'dob',
 		'date_joined',
 		'picture_path',

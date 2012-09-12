@@ -141,9 +141,33 @@ class CategoryController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Category');
+		$categories=Category::model()->findAll();
+		$ids=array();
+		$names=array();
+		$totalPosts=array();
+		$lastPosts=array();
+		$usernames=array();
+		foreach($categories as $category)
+		{
+			$posts=Thread::model()->findAllByAttributes(
+				                          array('category_id'=>$category->id));
+				                        
+		    $total=count($posts);
+		    if($total>0)
+		    $lastPost=$posts[$total-1];
+		    $username=User::model()->findByPk($lastPost->user_id)->first_name;
+			array_push($ids,$category->id);
+			array_push($names,$category->name);
+			array_push($totalPosts,$total);
+			array_push($lastPosts,$lastPost);
+			array_push($usernames,$username);
+		}
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			"names"=>$names,
+			"ids"=>$ids,
+			"totalPosts"=>$totalPosts,
+			"lastPosts"=>$lastPosts,
+			"usernames"=>$usernames,
 		));
 	}
 
