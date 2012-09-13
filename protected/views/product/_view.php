@@ -5,21 +5,9 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->user_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
-	<?php echo CHtml::encode($data->name); ?>
+	<?php echo CHtml::link(CHtml::encode($data->name), array('view', 'id'=>$data->id)); ?>
 	<br />
-	
-	<b><?php echo CHtml::encode($data->getAttributeLabel('video_path')); ?>:</b>
-        <!--<iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
-	--><br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
@@ -28,6 +16,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('available')); ?>:</b>
 	<?php echo CHtml::encode($data->available); ?>
 	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('video_path')); ?>:</b>
+        <!--<iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
+	--><br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>

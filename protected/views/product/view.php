@@ -12,19 +12,18 @@ $this->menu=array(
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
+	array_push($this->menu,array('label'=>'Edit Product', 'url'=>array('update', 'id'=>$model->id)));
 	array_push($this->menu,array('label'=>'Create Product', 'url'=>array('create')));
 }
 ?>
 
-<h1>View Product #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'user_id',
 		'name',
-		'picture_path',
 		'video_path',
 		'price',
 		'available',
