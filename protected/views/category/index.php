@@ -11,11 +11,11 @@ if(Yii::app()->user->checkAccess('admin'))
 	array_push($this->menu,	array('label'=>'Manage Category', 'url'=>array('admin')));
 }
 ?>
-<link rel="stylesheet" type="text/css" href="cena.css" />
+
 <h1 id = "cena">Categories</h1>
 <div>
 
-<table id = "categories" border="1" bordercolor="black" >
+<table id = "categories" >
 
 
 <tr id="headers" style="background:white url(css/bg.gif);">
@@ -29,7 +29,7 @@ Last Post
 </th>
 
 <th id = "total">
-Posts
+Total Posts
 </th>
 
 </tr>
@@ -39,7 +39,7 @@ Posts
 	<tr >
 
 
-	<td style="font-weight: bold; text-decoration: none;">
+	<td style="font-weight: bold; text-decoration: none; ">
 	<?php echo CHtml::link(CHtml::encode($names[$i]), 
 	             array('view', 'id'=>$ids[$i]),array('id'=>'link')); ?>
 	<br />
@@ -70,4 +70,6 @@ Posts
 </table>
 
 </div>
+
+
 

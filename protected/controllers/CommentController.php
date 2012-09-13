@@ -71,8 +71,14 @@ class CommentController extends Controller
 			$model->user_id=Yii::app()->user->id;
 			$model->thread_id=$this->_thread->id;
 			$model->created_at=new CDbExpression('Now()');
+			$this->_thread->updated_at=$model->created_at;
 			if($model->save())
+			{
+				$this->_thread->save();
 				$this->redirect(array('/thread/view','id'=>$model->thread_id,'cid'=>Thread::model()->findByPk($model->thread_id)->category_id));
+
+			}
+				
 		}
 
 		$this->render('create',array(

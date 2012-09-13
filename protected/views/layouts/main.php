@@ -56,7 +56,44 @@
 	<div class="clear"></div>
          <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
          <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
+<div id ="u">
+</div>
 	<div id="footer">
+	    <?php 
+	    $models=Category::model()->findAll();
+	    $list = CHtml::listData($models,'id', 'name');
+        echo CHtml::dropDownList('category', $models->id, $list, 
+                                             array('id'=>'forumddl',
+                                                   'empty' => 'Select a Category',
+                                                   'style'=>'width: 400px;',
+                                                   'onchange'=>'redirectToCategory()',
+                                                   ));
+	    ?>
+		<br/>
+
+
+		<script>
+		function redirectToCategory()
+		{
+			var url="";
+			var all=window.location+"";
+			document.getElementById('u').innerHTML=all.length;
+			for(var i=0;i<all.length;i++)
+			{
+				url+=all.charAt(i);
+				if(all.charAt(i)=='?')
+				{
+					break;
+				}
+				
+			}
+			window.location=url+"r=category/view&id="+
+			                document.getElementById('forumddl').value;
+		}
+		</script>
+
+
+
 		Copyright &copy; <?php echo date('Y'); ?> TeraSoft.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
