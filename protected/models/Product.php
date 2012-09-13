@@ -22,6 +22,10 @@ class Product extends CActiveRecord
 	const TYPE_available_at_stores = 1;
 	const TYPE_out_of_stock = 0;
 
+
+	public $productImage;
+
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -52,6 +56,7 @@ class Product extends CActiveRecord
 			array('user_id, price, available', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
 			array('picture_path, created_at, updated_at', 'safe'),
+			array('productImage', 'file', 'types' => 'png, gif, jpg', 'allowEmpty' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, user_id, name, picture_path, price, available', 'safe', 'on'=>'search'),
@@ -88,6 +93,49 @@ class Product extends CActiveRecord
 		);
 	}
 
+
+	public function behaviors() {
+		return array(
+			'productImageBehavior' => array(
+				'class' => 'ImageARBehavior',
+				'attribute' => 'productImage', // this must exist
+				'extension' => 'png, gif, jpg', // possible extensions, comma separated
+				'prefix' => 'img_',
+				'relativeWebRootFolder' => 'images/products/', // this folder must exist
+				
+				# 'forceExt' => png, // this is the default, every saved image will be a png one.
+				# Set to null if you want to keep the original format
+				
+				#'useImageMagick' => '/usr/bin', # I want to use imagemagick instead of GD, and
+				# it is located in /usr/bin on my computer.
+				
+				// this will define formats for the image.
+				// The format 'normal' always exist. This is the default format, by default no
+				// suffix or no processing is enabled.
+				'formats' => array(
+					// create a thumbnail grayscale format
+					'thumb' => array(
+						'suffix' => '_thumb',
+						'process' => array('resize' => array(60, 60), 'grayscale' => true),
+					),
+					// create a large one (in fact, no resize is applied)
+					'large' => array(
+						'suffix' => '_large',
+					),
+					// and override the default :
+					'normal' => array(
+						'process' => array('resize' => array(200, 200)),
+					),
+				),
+				
+				'defaultName' => 'default', // when no file is associated, this one is used by getFileUrl
+				// defaultName need to exist in the relativeWebRootFolder path, and prefixed by prefix,
+				// and with one of the possible extensions. if multiple formats are used, a default file must exist
+				// for each format. Name is constructed like this :
+				//     {prefix}{name of the default file}{suffix}{one of the extension}
+			)
+		);
+	}
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

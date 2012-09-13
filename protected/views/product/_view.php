@@ -18,8 +18,8 @@
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('video_path')); ?>:</b>
-        <iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
-	<br />
+        <!--<iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
+	--><br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
@@ -36,8 +36,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_at')); ?>:</b>
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />
-	
-	<?php echo CHtml::image('images/'.$data->picture_path," No image available",array("width"=>200)); ?>
+	<br />
+	<?php echo CHtml::image('images/products/img_'.$data->id," No image available"); ?>
 	<br />
 
 

@@ -9,8 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'product-form',
 	'enableAjaxValidation'=>false,
-	//'htmlOptions' => array(
-      //  'enctype' => 'multipart/form-data'),
+	'htmlOptions' => array('enctype'=>'multipart/form-data'),
 
 )); 
 	
@@ -28,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'picture_path'); ?>
-		<?php echo CHtml::activeFileField($model, 'picture_path');?>
+		<?php echo $form->fileField($model,'productImage');?>
 		<?php echo $form->error($model,'picture_path'); ?>
 	</div>
 	

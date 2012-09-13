@@ -33,5 +33,11 @@ if(Yii::app()->user->checkAccess('admin'))
 	),
 )); ?>
 
-<?php echo CHtml::image('images/'.$model->picture_path,"Product's image ",array("width"=>200)); ?>
+<?php 
+$format = 'normal'; //'large' or 'thumb'
+$path = $model->getFileUrl($format);
+
+
+
+echo CHtml::image($path,"Product's image "); ?>
 
