@@ -76,7 +76,6 @@
 		{
 			var url="";
 			var all=window.location+"";
-			document.getElementById('u').innerHTML=all.length;
 			for(var i=0;i<all.length;i++)
 			{
 				url+=all.charAt(i);
