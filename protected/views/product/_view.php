@@ -18,8 +18,8 @@
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('video_path')); ?>:</b>
-        <iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
-	<br />
+        <!--<iframe width="560" height="315" src="<?php echo CHtml::encode($data->video_path); ?>" frameborder="0" allowfullscreen></iframe>
+	--><br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
