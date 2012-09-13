@@ -56,15 +56,17 @@
 	<div class="clear"></div>
          <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
          <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
-
+         
 	<div id="footer">
+	<?php if(!Yii::app()->user->isGuest):?>
 	    <?php 
 	    $models=Category::model()->findAll();
 	    $list = CHtml::listData($models,'id', 'name');
-        echo CHtml::dropDownList('category', $models->id, $list, 
+        echo CHtml::dropDownList('category', false, $list, 
                                              array('id'=>'forumddl',
-                                                   'empty' => 'Select a Category',
+                                                   'empty' =>array(0=>'Select a Category'),
                                                    'style'=>'width: 400px;',
+                                                   'selected'=>'0',
                                                    'onchange'=>'redirectToCategory()',
                                                    ));
 	    ?>
@@ -85,11 +87,15 @@
 				}
 				
 			}
+			if(url.charAt(url.length-1)!='?')
+			{
+				url+='?';
+			}
 			window.location=url+"r=category/view&id="+
 			                document.getElementById('forumddl').value;
 		}
 		</script>
-
+<?php endif;?>
 
 
 		Copyright &copy; <?php echo date('Y'); ?> TeraSoft.<br/>
