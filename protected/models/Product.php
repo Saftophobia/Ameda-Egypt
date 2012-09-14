@@ -101,7 +101,7 @@ class Product extends CActiveRecord
 				'attribute' => 'productImage', // this must exist
 				'extension' => 'png, gif, jpg', // possible extensions, comma separated
 				'prefix' => 'img_',
-				'relativeWebRootFolder' => 'images/products/', // this folder must exist
+				'relativeWebRootFolder' => 'images/slider/all/', // this folder must exist
 				
 				# 'forceExt' => png, // this is the default, every saved image will be a png one.
 				# Set to null if you want to keep the original format

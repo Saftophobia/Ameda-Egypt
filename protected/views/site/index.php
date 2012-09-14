@@ -28,6 +28,22 @@ $this->pageTitle="Ameda Egypt";
 
 
 <?php
+
+function returnimages($dirname="images/slider/all/") {
+    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
+    $files = array();
+    if($handle = opendir($dirname)) {
+        while(false !== ($file = readdir($handle))){
+            if(eregi($pattern, $file)){ 
+                array_push($files, $file);
+            }
+        }
+
+        closedir($handle);
+        }
+    return($files);
+}
+
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
             'width'=>600, 
@@ -35,7 +51,7 @@ $this->pageTitle="Ameda Egypt";
             'timeout'=>6000,
             'infos'=>true,
             'constrainImage'=>true,
-            'images'=>array('01.jpg','02.jpg','03.jpg','04.jpg'),
+            'images'=>returnimages(),
             'alts'=>array('First description','Second description','Third description','Four description'),
             'defaultUrl'=>Yii::app()->request->hostInfo
             )

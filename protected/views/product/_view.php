@@ -29,7 +29,7 @@
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />
 	<br />
-	<?php echo CHtml::image('images/products/img_'.$data->id," No image available"); ?>
+	<?php echo CHtml::image('images/slider/all/img_'.$data->id," No image available"); ?>
 	<br />
 
 
