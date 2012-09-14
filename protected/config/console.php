@@ -21,7 +21,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=breastfeeding_dev',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '3161914',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 
@@ -32,6 +32,19 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+
+
+		'commandMap'=>array(
+        'migrate'=>array(
+            'class'=>'system.cli.commands.MigrateCommand',
+            'migrationPath'=>'application.migrations',
+            'migrationTable'=>'tbl_migration',
+            'connectionID'=>'db',
+            'templateFile'=>'application.migrations.template',
+        ),
+
+       	),
+
 		
 		'log'=>array(
 			'class'=>'CLogRouter',
