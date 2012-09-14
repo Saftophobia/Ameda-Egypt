@@ -173,20 +173,21 @@ class Product extends CActiveRecord
 
 
 
-	public static function returnimages($dirname="images/slider/all/") {
-    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
-    $files = array();
-    if($handle = opendir($dirname)) {
-        while(false !== ($file = readdir($handle))){
-            if(eregi($pattern, $file)){ 
-                array_push($files, $file);
-            }
-        }
+	public static function returnimages($dirname="images/slider/all/") 
+	{
+	    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
+	    $files = array();
+	    if($handle = opendir($dirname)) {
+	        while(false !== ($file = readdir($handle))){
+	            if(eregi($pattern, $file)){ 
+	                array_push($files, $file);
+	            }
+	        }
 
-        closedir($handle);
-        }
-    return($files);
-}
+	        closedir($handle);
+	        }
+	    return($files);
+	}
 
 
 	public static function returnproduct()
@@ -196,6 +197,7 @@ class Product extends CActiveRecord
 	    $link2product=array();
 	    foreach ($imagenames as $key => $value) {
 	        $number = preg_replace("/[^0-9]/", '', $value);
+
 	        $filename= "index.php?r=product/view&id=".$number;
 	        array_push($link2product, $filename);
 	    }
@@ -208,9 +210,22 @@ class Product extends CActiveRecord
 	    
 	    $Productname=array();
 	    foreach ($imagenames as $key => $value) {
+
 	        $number = preg_replace("/[^0-9]/", '', $value);
-	        $filename=Product::model()->findByPk($number)->name;
-	        array_push($Productname, $filename);
+	        
+	        $prod=Product::model()->findByPk($number);
+
+	        if(false == is_null($prod))
+	       	{	
+	                $filename=$prod->name;
+	                array_push($Productname, $filename);
+	       	}
+	       	else
+	       	{
+	       		array_push($Productname, "No image available");
+	       	} 
+
+	        
 	    }
 	    return($Productname);
 	}
