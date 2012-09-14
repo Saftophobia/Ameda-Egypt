@@ -44,6 +44,21 @@ function returnimages($dirname="images/slider/all/") {
     return($files);
 }
 
+
+function returndata()
+{
+    $imagenames=returnimages();
+    $numbers=array();
+    foreach ($imagenames as $key => $value) {
+        $number = preg_replace("/[^0-9]/", '', $value);
+        array_push($numbers, $number);
+    }
+    return($numbers);
+}
+
+//$fail=returndata();
+//print_r(returndata());
+
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
             'width'=>600, 
