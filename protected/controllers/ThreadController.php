@@ -1,5 +1,5 @@
 <?php
-
+//
 class ThreadController extends Controller
 {
 	/**
