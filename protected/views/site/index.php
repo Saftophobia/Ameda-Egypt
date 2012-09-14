@@ -18,3 +18,27 @@ $this->pageTitle="Ameda Egypt";
 
 
 <p>If you are not sure of the product you require please access the <a href="index.php?r=Product"> Product List</a>.</p>
+
+
+
+
+<br/>
+<br/>
+<br/>
+
+
+<?php
+        $this->widget('ext.slider.slider', array(
+            'container'=>'slideshow',
+            'width'=>600, 
+            'height'=>240, 
+            'timeout'=>6000,
+            'infos'=>true,
+            'constrainImage'=>true,
+            'images'=>array('01.jpg','02.jpg','03.jpg','04.jpg'),
+            'alts'=>array('First description','Second description','Third description','Four description'),
+            'defaultUrl'=>Yii::app()->request->hostInfo
+            )
+        );
+        ?>
+
