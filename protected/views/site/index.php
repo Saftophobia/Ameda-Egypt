@@ -28,49 +28,16 @@ $this->pageTitle="Ameda Egypt";
 
 
 <?php
-
-function returnimages($dirname="images/slider/all/") {
-    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
-    $files = array();
-    if($handle = opendir($dirname)) {
-        while(false !== ($file = readdir($handle))){
-            if(eregi($pattern, $file)){ 
-                array_push($files, $file);
-            }
-        }
-
-        closedir($handle);
-        }
-    return($files);
-}
-
-
-function returnproduct()
-{
-    $imagenames=returnimages();
-    
-    $link2product=array();
-    foreach ($imagenames as $key => $value) {
-        $number = preg_replace("/[^0-9]/", '', $value);
-        $filename= "index.php?r=product/view&id=".$number;
-        array_push($link2product, $filename);
-    }
-    return($link2product);
-}
-
-//$fail=returndata();
-//print_r(returnproduct());
-
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
             'width'=>600, 
-            'height'=>240, 
+            'height'=>400, 
             'timeout'=>6000,
             'infos'=>true,
             'constrainImage'=>true,
-            'images'=>returnimages(),
+            'images'=>Product::returnimages(),
             'alts'=>array('First description','Second description','Third description','Four description'),
-            'urls'=>returnproduct(),
+            'urls'=>Product::returnproduct(),
             )
         );
         ?>
