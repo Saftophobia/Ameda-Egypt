@@ -202,6 +202,19 @@ class Product extends CActiveRecord
 	    return($link2product);
 	}
 
+	public static function returnproductname()
+	{
+	    $imagenames=Product::returnimages();
+	    
+	    $Productname=array();
+	    foreach ($imagenames as $key => $value) {
+	        $number = preg_replace("/[^0-9]/", '', $value);
+	        $filename=Product::model()->findByPk($number)->name;
+	        array_push($Productname, $filename);
+	    }
+	    return($Productname);
+	}
+
 
 
 }

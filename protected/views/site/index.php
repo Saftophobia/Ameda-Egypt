@@ -36,7 +36,7 @@ $this->pageTitle="Ameda Egypt";
             'infos'=>true,
             'constrainImage'=>true,
             'images'=>Product::returnimages(),
-            'alts'=>array('First description','Second description','Third description','Four description'),
+            'alts'=>Product::returnproductname(),
             'urls'=>Product::returnproduct(),
             )
         );
