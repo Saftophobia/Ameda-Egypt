@@ -45,19 +45,21 @@ function returnimages($dirname="images/slider/all/") {
 }
 
 
-function returndata()
+function returnproduct()
 {
     $imagenames=returnimages();
-    $numbers=array();
+    
+    $link2product=array();
     foreach ($imagenames as $key => $value) {
         $number = preg_replace("/[^0-9]/", '', $value);
-        array_push($numbers, $number);
+        $filename= "index.php?r=product/view&id=".$number;
+        array_push($link2product, $filename);
     }
-    return($numbers);
+    return($link2product);
 }
 
 //$fail=returndata();
-//print_r(returndata());
+//print_r(returnproduct());
 
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
@@ -68,7 +70,7 @@ function returndata()
             'constrainImage'=>true,
             'images'=>returnimages(),
             'alts'=>array('First description','Second description','Third description','Four description'),
-            'defaultUrl'=>Yii::app()->request->hostInfo
+            'urls'=>returnproduct(),
             )
         );
         ?>
