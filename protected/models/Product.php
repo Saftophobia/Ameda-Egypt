@@ -171,15 +171,31 @@ class Product extends CActiveRecord
 	}
 
 
+	public static function returnimageslocation($someid)
+	{
+		
+		$prod=Product::model()->findByPk($someid);
+
+		
+	        if(false == is_null($prod))
+	       	{	
+	       		return $prod->getFileUrl('normal');
+	        }
+	        else
+	        {
+	        	return 'No image preview';
+	        }
+		
+	
+	}	
 
 
 	public static function returnimages($dirname="images/slider/all/") 
 	{
-	    $pattern="(large\.png$)"; 
 	    $files = array();
 	    if($handle = opendir($dirname)) {
 	        while(false !== ($file = readdir($handle))){
-	            if(preg_match($pattern, $file)){ 
+	            if(preg_match("(large\.jpg$)", $file) || preg_match("(large\.png$)", $file) || preg_match("(large\.jpeg$)", $file)){ 
 	                array_push($files, $file);
 	            }
 	        }
@@ -188,6 +204,7 @@ class Product extends CActiveRecord
 	        }
 	    return($files);
 	}
+
 
 
 	public static function returnproduct()
