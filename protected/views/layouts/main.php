@@ -52,11 +52,7 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
-
-	<div class="clear"></div>
-         <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
-         <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
-         
+	  
 	<div id="footer">
 	<?php if(!Yii::app()->user->isGuest):?>
 	    <?php 
@@ -96,8 +92,13 @@
 		}
 		</script>
 <?php endif;?>
-
-
+<br/>
+<br/>
+<div align="center">
+	<div class="clear"></div>
+         <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
+         <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
+  	</div>   
 		Copyright &copy; <?php echo date('Y'); ?> TeraSoft.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>

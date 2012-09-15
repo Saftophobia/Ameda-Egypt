@@ -50,7 +50,7 @@ class ThreadController extends Controller
 				'condition'=>'thread_id=:thread_id',
 				'params'=>array(':thread_id'=>$this->loadModel($id)->id),
 				),
-			'pagination'=>array('pageSize'=>10),
+			    'pagination'=>array('pageSize'=>100),
 				));
 
 

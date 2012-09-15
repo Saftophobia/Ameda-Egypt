@@ -39,7 +39,7 @@ Total Posts
 	<tr >
 
 
-	<td style="font-weight: bold; text-decoration: none; ">
+	<td style="background-color:#e9e9e9;font-weight: bold; text-decoration: none; ">
 	<?php echo CHtml::link(CHtml::encode($names[$i]), 
 	             array('view', 'id'=>$ids[$i]),array('id'=>'link')); ?>
 	<br />
@@ -58,7 +58,7 @@ Total Posts
 
 	</td>
 
-	<td style="font-weight: bold;">
+	<td style="background-color:#e9e9e9;font-weight: bold;">
 	<?php echo CHtml::encode($totalPosts[$i]); ?>
 	<br />
 	</td>

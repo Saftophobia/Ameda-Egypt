@@ -65,9 +65,9 @@ class CommentController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Comment']))
+		if(isset($_POST['content']))
 		{
-			$model->attributes=$_POST['Comment'];
+			$model->content=$_POST['content'];
 			$model->user_id=Yii::app()->user->id;
 			$model->thread_id=$this->_thread->id;
 			$model->created_at=new CDbExpression('Now()');
@@ -75,15 +75,21 @@ class CommentController extends Controller
 			if($model->save())
 			{
 				$this->_thread->save();
-				$this->redirect(array('/thread/view','id'=>$model->thread_id,'cid'=>Thread::model()->findByPk($model->thread_id)->category_id));
-
+				$user=User::model()->findByPk($model->user_id);
+				        echo CJSON::encode(array(
+										'content'=>$model->content,
+										'created_at'=>Comment::model()->findByPk($model->id)->created_at,
+										'first_name'=>$user->first_name,
+										'last_name'=>$user->last_name,
+										'username'=>$user->username,
+										'email'=>$user->email,
+										'date_joined'=>$user->date_joined,
+										'id'=>$user->id));
+			
 			}
+	
 				
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
