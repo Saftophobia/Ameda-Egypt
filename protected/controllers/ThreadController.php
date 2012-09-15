@@ -171,8 +171,8 @@ LEFT JOIN tbl_user ON admins.userid = tbl_user.id")->query();
 		$date=new CDbExpression('Now()');
 		//$reason
 		//$link has to be changed depending on the server 
-		$link='http://localhost/yii/bf/index.php?r=thread/view&id='.$id
-		$mailSubject='[BreastFeeding Forum] Thread reported'
+		$link='http://localhost/yii/breastfeeding/index.php?r=thread/view&id='.$id;
+		$mailSubject='[BreastFeeding Forum] Thread reported';
 		$mailContent=
 'Dear Admin,
 A thread on Breast Feeding forum has been reported on '.$date.' Please check the thread for more information.

@@ -49,6 +49,7 @@ $allThreads=count($threads);
 for($i=0;$i<$allThreads;$i++):
 $totalComments=Comment::model()->findAllByAttributes(array('thread_id'=>$threads[$i]->id));
 $countComments=count($totalComments);
+if($countComments > 0)
 $lastUser=User::model()->findByPk($totalComments[$countComments-1]->user_id);
 ?>
 	<tr >

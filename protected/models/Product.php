@@ -175,11 +175,11 @@ class Product extends CActiveRecord
 
 	public static function returnimages($dirname="images/slider/all/") 
 	{
-	    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
+	    $pattern="(large\.png$)"; 
 	    $files = array();
 	    if($handle = opendir($dirname)) {
 	        while(false !== ($file = readdir($handle))){
-	            if(eregi($pattern, $file)){ 
+	            if(preg_match($pattern, $file)){ 
 	                array_push($files, $file);
 	            }
 	        }
