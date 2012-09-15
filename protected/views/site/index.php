@@ -18,3 +18,27 @@ $this->pageTitle="Ameda Egypt";
 
 
 <p>If you are not sure of the product you require please access the <a href="index.php?r=Product"> Product List</a>.</p>
+
+
+
+
+<br/>
+<br/>
+<br/>
+
+
+<?php
+        $this->widget('ext.slider.slider', array(
+            'container'=>'slideshow',
+            'width'=>600, 
+            'height'=>400, 
+            'timeout'=>6000,
+            'infos'=>true,
+            'constrainImage'=>true,
+            'images'=>Product::returnimages(),
+            'alts'=>Product::returnproductname(),
+            'urls'=>Product::returnproduct(),
+            )
+        );
+        ?>
+

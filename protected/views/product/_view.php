@@ -14,7 +14,16 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('available')); ?>:</b>
-	<?php echo CHtml::encode($data->available); ?>
+	<?php 
+	if($data->available == '1')
+	{
+		echo CHtml::encode('Available at stores');
+	}else
+	{
+		echo CHtml::encode('Out of stock');
+	}
+
+	?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('video_path')); ?>:</b>
@@ -29,7 +38,7 @@
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />
 	<br />
-	<?php echo CHtml::image('images/products/img_'.$data->id," No image available"); ?>
+	<?php echo CHtml::image('images/slider/all/img_'.$data->id," No image available"); ?>
 	<br />
 
 

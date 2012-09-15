@@ -101,7 +101,7 @@ class Product extends CActiveRecord
 				'attribute' => 'productImage', // this must exist
 				'extension' => 'png, gif, jpg', // possible extensions, comma separated
 				'prefix' => 'img_',
-				'relativeWebRootFolder' => 'images/products/', // this folder must exist
+				'relativeWebRootFolder' => 'images/slider/all/', // this folder must exist
 				
 				# 'forceExt' => png, // this is the default, every saved image will be a png one.
 				# Set to null if you want to keep the original format
@@ -169,4 +169,67 @@ class Product extends CActiveRecord
 		self::TYPE_out_of_stock=>'Out of stock',
 		);
 	}
+
+
+
+
+	public static function returnimages($dirname="images/slider/all/") 
+	{
+	    $pattern="(large\.jpg$)|(large\.png$)|(large\.jpeg$)|(large\.gif$)"; 
+	    $files = array();
+	    if($handle = opendir($dirname)) {
+	        while(false !== ($file = readdir($handle))){
+	            if(eregi($pattern, $file)){ 
+	                array_push($files, $file);
+	            }
+	        }
+
+	        closedir($handle);
+	        }
+	    return($files);
+	}
+
+
+	public static function returnproduct()
+	{
+	    $imagenames=Product::returnimages();
+	    
+	    $link2product=array();
+	    foreach ($imagenames as $key => $value) {
+	        $number = preg_replace("/[^0-9]/", '', $value);
+
+	        $filename= "index.php?r=product/view&id=".$number;
+	        array_push($link2product, $filename);
+	    }
+	    return($link2product);
+	}
+
+	public static function returnproductname()
+	{
+	    $imagenames=Product::returnimages();
+	    
+	    $Productname=array();
+	    foreach ($imagenames as $key => $value) {
+
+	        $number = preg_replace("/[^0-9]/", '', $value);
+	        
+	        $prod=Product::model()->findByPk($number);
+
+	        if(false == is_null($prod))
+	       	{	
+	                $filename=$prod->name;
+	                array_push($Productname, $filename);
+	       	}
+	       	else
+	       	{
+	       		array_push($Productname, "No image available");
+	       	} 
+
+	        
+	    }
+	    return($Productname);
+	}
+
+
+
 }
