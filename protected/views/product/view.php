@@ -31,6 +31,9 @@ if(Yii::app()->user->checkAccess('admin'))
 		'updated_at',
 	),
 )); ?>
+<br />
 
 <?php echo CHtml::image($model->getFileUrl('normal'),"Product's image "); ?>
-
+<br />
+<br />
+<!--<iframe width="560" height="315" src="https://www.youtube.com/watch?v=dO5ydY3LawQ" frameborder="0" allowfullscreen></iframe>-->
