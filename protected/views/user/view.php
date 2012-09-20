@@ -14,7 +14,7 @@ if(Yii::app()->user->id==$model->id)
 }
 ?>
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->first_name; ?> <?php echo $model->last_name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

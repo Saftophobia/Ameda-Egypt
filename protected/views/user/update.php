@@ -17,6 +17,6 @@ if(Yii::app()->user->checkAccess('admin'))
 }
 ?>
 
-<h1>Update User <?php echo $model->id; ?></h1>
+<h1><?php echo $model->first_name; ?> <?php echo $model->last_name; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
