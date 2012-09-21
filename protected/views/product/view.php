@@ -29,6 +29,7 @@ if(Yii::app()->user->checkAccess('admin'))
 		'available',
 		'created_at',
 		'updated_at',
+		'info'
 	),
 )); ?>
 <br />

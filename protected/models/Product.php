@@ -12,7 +12,8 @@
  * @property integer $available
  * @property string $created_at
  * @property string $updated_at
- *
+ * @property TEXT $info
+ * 
  *
  * The followings are the available model relations:
  * @property User $user
@@ -55,7 +56,7 @@ class Product extends CActiveRecord
 			array('user_id, name, price', 'required'),
 			array('user_id, price, available', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
-			array('picture_path, created_at, updated_at', 'safe'),
+			array('picture_path, created_at, updated_at, info ', 'safe'),
 			array('productImage', 'file', 'types' => 'png, gif, jpg', 'allowEmpty' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -90,6 +91,7 @@ class Product extends CActiveRecord
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 			'available' => 'Available',
+			'info' => 'Description'
 		);
 	}
 
