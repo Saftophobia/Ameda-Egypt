@@ -32,8 +32,11 @@ if(Yii::app()->user->checkAccess('admin'))
 	),
 )); ?>
 <br />
-
-<?php echo CHtml::image($model->getFileUrl('normal'),"Product's image "); ?>
 <br />
 <br />
-<!--<iframe width="560" height="315" src="https://www.youtube.com/watch?v=dO5ydY3LawQ" frameborder="0" allowfullscreen></iframe>-->
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"Product's image "); ?></a>
+<br />
+<br />
+<br />
+<br />
+<iframe width="560" height="315" src="<?php echo $model->video_path ?>" frameborder="0" allowfullscreen></iframe>
