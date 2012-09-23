@@ -155,13 +155,16 @@ class CategoryController extends Controller
 				                        
 		    $total=count($posts);
 		    if($total>0)
-		    $lastPost=$posts[$total-1];
-		    $username=User::model()->findByPk($lastPost->user_id)->first_name;
+		    {
+		    	$lastPost=$posts[$total-1];
+		    	$username=User::model()->findByPk($lastPost->user_id)->first_name;
+		    	array_push($lastPosts,$lastPost);
+				array_push($usernames,$username);
+		    }
+	
 			array_push($ids,$category->id);
 			array_push($names,$category->name);
 			array_push($totalPosts,$total);
-			array_push($lastPosts,$lastPost);
-			array_push($usernames,$username);
 		}
 		$this->render('index',array(
 			"names"=>$names,
