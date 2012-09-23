@@ -15,11 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'info'); ?>
-		<?php echo $form->textArea($model,'info',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'info'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'first_name'); ?>
@@ -39,11 +35,7 @@
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'confirmed_email'); ?>
-		<?php echo $form->textField($model,'confirmed_email'); ?>
-		<?php echo $form->error($model,'confirmed_email'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -71,8 +63,16 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'info'); ?>
+		<?php echo $form->textArea($model,'info',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'info'); ?>
+	</div>
+
+
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'picture_path'); ?>
-		<?php echo $form->textArea($model,'picture_path',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->fileField($model,'picture_path'); ?>
 		<?php echo $form->error($model,'picture_path'); ?>
 	</div>
 

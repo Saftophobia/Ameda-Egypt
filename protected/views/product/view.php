@@ -29,14 +29,15 @@ if(Yii::app()->user->checkAccess('admin'))
 		'available',
 		'created_at',
 		'updated_at',
+		'info'
 	),
 )); ?>
-
-<?php 
-$format = 'normal'; //'large' or 'thumb'
-$path = $model->getFileUrl($format);
-
-
-
-echo CHtml::image($path,"Product's image "); ?>
-
+<br />
+<br />
+<br />
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"Product's image "); ?></a>
+<br />
+<br />
+<br />
+<br />
+<iframe width="560" height="315" src="<?php echo $model->video_path ?>" frameborder="0" allowfullscreen></iframe>

@@ -49,6 +49,12 @@
 		<?php echo $form->error($model,'available'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'info'); ?>
+		<?php echo $form->textArea($model,'info',array('rows'=>6, 'cols'=>50 , "style"=>"color: orange;")); ?>
+		<?php echo $form->error($model,'info'); ?>
+	</div>
+
 	
 
 
