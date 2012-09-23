@@ -16,6 +16,7 @@ the available columns in table 'tbl_user':
  * @property string $dob
  * @property string $date_joined
  * @property string $picture_path
+ * @property string $locked
  *
  * The followings are the available model relations:
  * @property Category[] $categories
@@ -81,7 +82,7 @@ class User extends CActiveRecord
 			array('info, dob, picture_path, password_repeat', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, info, first_name, last_name, email, confirmed_email, username, password, dob, date_joined, picture_path', 'safe', 'on'=>'search'),
+			array('id, first_name, last_name, email, username, dob, date_joined', 'safe', 'on'=>'search'),
 		);
 	}
 

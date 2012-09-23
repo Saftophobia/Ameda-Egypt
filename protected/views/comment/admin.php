@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Comment', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
