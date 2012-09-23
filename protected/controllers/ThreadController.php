@@ -66,6 +66,10 @@ class ThreadController extends Controller
 	 */
 	public function actionCreate()
 	{
+		if(User::model()->findByPk(Yii::app()->user->id)->locked)
+		{
+			throw new CHttpException('You are locked due to offensive action');
+		}
 		$model=new Thread;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -129,7 +133,7 @@ class ThreadController extends Controller
 		// $this->performAjaxValidation($model);
 		
 		$model->locked=1;
-		if($model->save())
+		if($model->save(false))
 			$this->redirect(array('view','id'=>$model->id));
 		
 
