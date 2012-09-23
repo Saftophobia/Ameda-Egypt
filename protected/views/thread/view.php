@@ -76,7 +76,7 @@ Date Joined: <?php echo $user->date_joined;?>
 <br/>
 <br/>
 <br/>
-<?php if(!$model->locked):?>
+<?php if(!$model->locked&&!User::model()->findByPk(Yii::app()->user->id)->locked):?>
 <div style='font-size: 35px;font-weight: bold;'>
 Leave a Comment:
 <hr />
@@ -92,7 +92,7 @@ Leave a Comment:
                                                 'onfocus'=>'clearArea()',
                                                 'id'=>'commenttextarea')); ?>
 </div>
-<?php else :?>
+<?php else: if($model->locked):?>
 <br/>
 <br/>
 <div style='font-size: 35px;font-weight: bold;text-align:center;'>
@@ -101,6 +101,16 @@ This Thread is CLOSED
 <br/>
 <br/>
 </div>
+<?php else :?>
+<br/>
+<br/>
+<div style='font-size: 35px;font-weight: bold;text-align:center;'>
+You are BANNED due to offensive actions.
+<hr />
+<br/>
+<br/>
+</div>
+<?php endif;?>
 <?php endif;?>
 <script>
 function clearArea()
