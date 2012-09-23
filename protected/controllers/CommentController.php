@@ -60,6 +60,8 @@ class CommentController extends Controller
 	 */
 	public function actionCreate()
 	{
+		if(!$this->_thread->locked)
+		{
 		$model=new Comment;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -90,6 +92,7 @@ class CommentController extends Controller
 	
 				
 		}
+	}
 	}
 
 	/**
