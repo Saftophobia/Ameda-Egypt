@@ -60,6 +60,10 @@ class CommentController extends Controller
 	 */
 	public function actionCreate()
 	{
+		if(User::model()->findByPk(Yii::app()->user->id)->locked)
+		{
+			throw new CHttpException(403,'You Are Locked Due To Offensive Action');
+		}
 		if(!$this->_thread->locked)
 		{
 		$model=new Comment;
