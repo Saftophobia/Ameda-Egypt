@@ -4,16 +4,15 @@ $data=$dataProvider->data;
 for($i=0; $i<$count; $i++):
 $user=User::model()->findByPk($data[$i]->user_id); 
 ?>
-<table>
+<table style="margin:0px;">
 <caption style="text-align:left;background-color: #00547A;color:white;">
 <?php echo $data[$i]->created_at;?>
 </caption>
 <tr>
-<td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 350px;">
+<td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 150px;">
 <div style="font-size: 30px; font-weight:bold; ">
 <?php echo CHtml::link($user->username,array('/user/view','id'=>$data[$i]->user_id)); ?>
 </div>
-<br/>
 <br/>
 <br/>
 <div style='color: black;font-size:12px;text-align: left'>
@@ -28,9 +27,8 @@ Date Joined: <?php echo $user->date_joined;?>
 <br/ >
 </div>
 </td>
-<td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 350px;">
+<td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 150px;">
 <hr />
-
 <div style="font-size:25px;">
 <?php echo $data[$i]->content; ?>
 </div>
