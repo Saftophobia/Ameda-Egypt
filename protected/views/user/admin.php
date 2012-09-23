@@ -54,15 +54,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'last_name',
 		'email',
 		'confirmed_email',
-		/*
 		'username',
-		'password',
-		'dob',
-		'date_joined',
-		'picture_path',
-		*/
 		array(
 			'class'=>'CButtonColumn',
+			'template'=>'{view} {delete}',
 		),
 	),
 )); ?>
