@@ -35,7 +35,7 @@ else
 <?php echo $model->created_at?>
 </caption>
 <tr>
-<td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 350px;">
+<td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 270px;">
 <div style="font-size: 30px; font-weight:bold; ">
 <?php $user=User::model()->findByPk($model->user_id);?>
 <?php echo CHtml::link($user->username,array('/user/view','id'=>$model->user_id)); ?>
@@ -55,7 +55,7 @@ Date Joined: <?php echo $user->date_joined;?>
 <br/ >
 </div>
 </td>
-<td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 350px;">
+<td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 270px;">
 <h3 style="font-size:15px;">
 <?php echo $model->title; ?>
 <br />
@@ -76,6 +76,7 @@ Date Joined: <?php echo $user->date_joined;?>
 <br/>
 <br/>
 <br/>
+<?php if(!$model->locked):?>
 <div style='font-size: 35px;font-weight: bold;'>
 Leave a Comment:
 <hr />
@@ -91,6 +92,16 @@ Leave a Comment:
                                                 'onfocus'=>'clearArea()',
                                                 'id'=>'commenttextarea')); ?>
 </div>
+<?php else :?>
+<br/>
+<br/>
+<div style='font-size: 35px;font-weight: bold;text-align:center;'>
+This Thread is CLOSED
+<hr />
+<br/>
+<br/>
+</div>
+<?php endif;?>
 <script>
 function clearArea()
 {
@@ -116,30 +127,30 @@ function clearArea()
 	            'success'=>"function(data)
 	            			{
 	            				$('#comments').append(
-		            				'<table>'+
+		            				'<table style=margin:0px;>'+
 '<caption style=text-align:left;background-color:#00547A;color:white;>'
 + data.created_at.toString()+
 '</caption>'+
 '<tr>'+
-'<td style=background-color:#e9e9e9;vertical-align:top;width:100px;height:350px;>'+
+'<td style=background-color:#e9e9e9;vertical-align:top;width:100px;height:150px;>'+
 '<div>'+
 '<a href=x style=font-size:30px;font-weight:bold;>'+data.username+'</a>'+
 '</div>'+
-'<br/>'+
-'<br/>'+
+'<br />'+
+'<br />'+
 '<div style=color:black;font-size:12px;text-align:left>'+
 'Name: '+data.first_name + ' '+data.last_name+
-'<br/ >'+
-'<br/ >'+
+'<br />'+
+'<br />'+
 'Email: ' +data.email+
-'<br/ >'+
-'<br/ >'+
+'<br />'+
+'<br />'+
 'Date Joined: ' + data.date_joined+
-'<br/ >'+
-'<br/ >'+
+'<br />'+
+'<br />'+
 '</div>'+
 '</td>'+
-'<td style=vertical-align:top;text-align:left;color:black;width:300px;height:350px;>'+
+'<td style=vertical-align:top;text-align:left;color:black;width:300px;height:150px;>'+
 '<hr />'+
 '<div style=font-size:25px;>'+
 data.content+
