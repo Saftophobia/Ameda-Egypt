@@ -9,7 +9,7 @@ class m120901_100051_add_foreign_keys_to_table_tbl_thread extends CDbMigration
 		                               'no action','no action');
 		$this->addForeignKey('category_id_thread','tbl_thread','category_id',
 		                                    'tbl_category','id',
-		                                    'no action','no action');
+		                                    'cascade','no action');
 	}
 
 	public function down()

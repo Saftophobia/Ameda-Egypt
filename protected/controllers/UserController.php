@@ -114,7 +114,13 @@ class UserController extends Controller
 		{
 			throw new CHttpException(403,'You are not authorized to perform this action.');
 		}
-		$this->loadModel($id)->delete();
+
+		$model=$this->loadModel($id);
+		if(!$model->locked)
+			$model->locked=true;
+		else
+			$model->locked=false;
+		$model->save(false);
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
