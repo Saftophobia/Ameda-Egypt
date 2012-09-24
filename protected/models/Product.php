@@ -7,7 +7,6 @@
  * @property integer $id
  * @property integer $user_id
  * @property string $name
- * @property string $picture_path
  * @property integer $price
  * @property integer $available
  * @property string $created_at
@@ -56,11 +55,11 @@ class Product extends CActiveRecord
 			array('user_id, name, price', 'required'),
 			array('user_id, price, available', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
-			array('picture_path, created_at, updated_at, info ', 'safe'),
+			array('created_at, updated_at, info ', 'safe'),
 			array('productImage', 'file', 'types' => 'png, gif, jpg', 'allowEmpty' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, name, picture_path, price, available', 'safe', 'on'=>'search'),
+			array('id, user_id, name, price, available', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -85,7 +84,7 @@ class Product extends CActiveRecord
 			'id' => 'ID',
 			'user_id' => 'User',
 			'name' => 'Name',
-			'picture_path' => 'Picture Path',
+			'productImage' => 'Picture Path',
 			'video_path' => 'Video Path',
 			'price' => 'Price',
 			'created_at' => 'Created At',
@@ -152,7 +151,6 @@ class Product extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('picture_path',$this->picture_path,true);
 		$criteria->compare('price',$this->price);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);

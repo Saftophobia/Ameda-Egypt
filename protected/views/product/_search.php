@@ -27,11 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'picture_path'); ?>
-		<?php echo $form->textArea($model,'picture_path',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'price'); ?>
 		<?php echo $form->textField($model,'price'); ?>
 	</div>

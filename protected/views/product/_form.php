@@ -26,9 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'picture_path'); ?>
+		<?php echo $form->labelEx($model,'productImage'); ?>
 		<?php echo $form->fileField($model,'productImage');?>
-		<?php echo $form->error($model,'picture_path'); ?>
+		<?php echo $form->error($model,'productImage'); ?>
 	</div>
 	
 	<div class="row">
