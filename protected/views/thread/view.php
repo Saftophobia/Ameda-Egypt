@@ -38,10 +38,14 @@ else
 <td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 270px;">
 <div style="font-size: 30px; font-weight:bold; ">
 <?php $user=User::model()->findByPk($model->user_id);?>
+<br/>
+<?php echo CHtml::image($user->getFileUrl('normal'),"User's image "); ?>
+
+<br/>
+<br/>
 <?php echo CHtml::link($user->username,array('/user/view','id'=>$model->user_id)); ?>
 </div>
-<br/>
-<br/>
+
 <br/>
 <div style='color: black;font-size:12px;text-align: left'>
 Name: <?php echo $user->first_name;?> <?php echo $user->last_name;?>
@@ -53,6 +57,7 @@ Email: <?php echo $user->email;?>
 Date Joined: <?php echo $user->date_joined;?>
 <br/ >
 <br/ >
+
 </div>
 </td>
 <td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 270px;">
