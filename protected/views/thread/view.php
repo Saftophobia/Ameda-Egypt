@@ -155,6 +155,9 @@ function clearArea()
 '<br />'+
 
 '<div style=color:black;font-size:12px;text-align:left>'+
+'<img src = \'' + data.image +'\'/> '+
+'<br />'+
+'<br />'+
 'Name: '+data.first_name + ' '+data.last_name+
 '<br />'+
 '<br />'+
