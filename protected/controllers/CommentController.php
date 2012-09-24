@@ -90,7 +90,9 @@ class CommentController extends Controller
 										'username'=>$user->username,
 										'email'=>$user->email,
 										'date_joined'=>$user->date_joined,
-										'id'=>$user->id));
+										'id'=>$user->id,
+										'image'=>$user->getFileUrl('normal'),
+										));
 			
 			}
 	
