@@ -81,6 +81,7 @@ class User extends CActiveRecord
 			array('email', 'length', 'max'=>200),
 			array('username, password', 'length', 'max'=>100),
 			array('info, dob, password_repeat', 'safe'),
+			array('userImage', 'file', 'types' => 'png, gif, jpg', 'allowEmpty' => true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, first_name, last_name, email, username, dob, date_joined', 'safe', 'on'=>'search'),
@@ -122,6 +123,54 @@ class User extends CActiveRecord
 		);
 	}
 
+
+
+	public function behaviors() {
+		return array(
+			'userImageBehavior' => array(
+				'class' => 'ImageARBehavior',
+				'attribute' => 'userImage', // this must exist
+				'extension' => 'png, gif, jpg', // possible extensions, comma separated
+				'prefix' => 'img_',
+				'relativeWebRootFolder' => 'images/users/', // this folder must exist
+				
+				# 'forceExt' => png, // this is the default, every saved image will be a png one.
+				# Set to null if you want to keep the original format
+				
+				#'useImageMagick' => '/usr/bin', # I want to use imagemagick instead of GD, and
+				# it is located in /usr/bin on my computer.
+				
+				// this will define formats for the image.
+				// The format 'normal' always exist. This is the default format, by default no
+				// suffix or no processing is enabled.
+				'formats' => array(
+					// create a thumbnail grayscale format
+					'thumb' => array(
+						'suffix' => '_thumb',
+						'process' => array('resize' => array(60, 60), 'grayscale' => true),
+					),
+					// create a large one (in fact, no resize is applied)
+					'large' => array(
+						'suffix' => '_large',
+					),
+					// and override the default :
+					'normal' => array(
+						'process' => array('resize' => array(200, 200)),
+					),
+				),
+				
+				'defaultName' => 'default', // when no file is associated, this one is used by getFileUrl
+				// defaultName need to exist in the relativeWebRootFolder path, and prefixed by prefix,
+				// and with one of the possible extensions. if multiple formats are used, a default file must exist
+				// for each format. Name is constructed like this :
+				//     {prefix}{name of the default file}{suffix}{one of the extension}
+			)
+		);
+	}
+
+
+
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -156,9 +205,31 @@ class User extends CActiveRecord
 	parent::afterValidate();
 	$this->password = $this->encrypt($this->password);
 	}
+
+
+
 	public function encrypt($value)
 	{
 	return md5($value);
 	}
 
+
+
+	public static function returnimageslocation($someid)
+	{
+		
+		$uservar=User::model()->findByPk($someid);
+
+		
+	        if(false == is_null($uservar))
+	       	{	
+	       		return $uservar->getFileUrl('normal');
+	        }
+	        else
+	        {
+	        	return 'No image preview';
+	        }
+		
+	
+	}	
 }

@@ -26,6 +26,13 @@
 	<br />
 
 
+	<br />
+	<br />
+	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
+	<br />
+
+
+
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
 	<?php echo CHtml::encode($data->password); ?>

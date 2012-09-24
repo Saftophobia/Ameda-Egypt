@@ -9,6 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -36,6 +37,12 @@
 	</div>
 
 	
+	<div class="row">
+		<?php echo $form->labelEx($model,'userImage'); ?>
+		<?php echo $form->fileField($model,'userImage');?>
+		<?php echo $form->error($model,'userImage'); ?>
+	</div>
+
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -70,11 +77,7 @@
 
 
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'userImage'); ?>
-		<?php echo $form->fileField($model,'userImage'); ?>
-		<?php echo $form->error($model,'userImage'); ?>
-	</div>
+
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

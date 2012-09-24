@@ -28,3 +28,10 @@ if(Yii::app()->user->id==$model->id)
 		'date_joined',
 	),
 )); ?>
+
+
+<br />
+<br />
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"User's image "); ?></a>
+<br />
+
