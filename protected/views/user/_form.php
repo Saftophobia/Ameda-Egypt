@@ -71,9 +71,9 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'picture_path'); ?>
-		<?php echo $form->fileField($model,'picture_path'); ?>
-		<?php echo $form->error($model,'picture_path'); ?>
+		<?php echo $form->labelEx($model,'userImage'); ?>
+		<?php echo $form->fileField($model,'userImage'); ?>
+		<?php echo $form->error($model,'userImage'); ?>
 	</div>
 
 	<div class="row buttons">

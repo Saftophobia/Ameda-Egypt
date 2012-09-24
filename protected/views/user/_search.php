@@ -56,10 +56,6 @@
 		<?php echo $form->textField($model,'date_joined'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'picture_path'); ?>
-		<?php echo $form->textArea($model,'picture_path',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>

@@ -39,9 +39,6 @@
 	<?php echo CHtml::encode($data->date_joined); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('picture_path')); ?>:</b>
-	<?php echo CHtml::encode($data->picture_path); ?>
-	<br />
 
 	*/ ?>
 

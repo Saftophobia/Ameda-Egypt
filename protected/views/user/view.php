@@ -26,6 +26,5 @@ if(Yii::app()->user->id==$model->id)
 		'info',
 		'dob',
 		'date_joined',
-		'picture_path',
 	),
 )); ?>

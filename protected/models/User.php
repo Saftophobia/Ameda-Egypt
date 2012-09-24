@@ -4,7 +4,7 @@
  * This is the model class for table "tbl_user".
  *
  * The followings are public $password_repeat;
-the available columns in table 'tbl_user':
+ * the available columns in table 'tbl_user':
  * @property integer $id
  * @property string $info
  * @property string $first_name
@@ -28,6 +28,7 @@ class User extends CActiveRecord
 {
 
 	public $password_repeat;
+	public $userImage;
 
 	/**
 	 * Returns the static model of the specified AR class.
@@ -79,7 +80,7 @@ class User extends CActiveRecord
 			array('first_name, last_name', 'length', 'max'=>50),
 			array('email', 'length', 'max'=>200),
 			array('username, password', 'length', 'max'=>100),
-			array('info, dob, picture_path, password_repeat', 'safe'),
+			array('info, dob, password_repeat', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, first_name, last_name, email, username, dob, date_joined', 'safe', 'on'=>'search'),
@@ -117,7 +118,7 @@ class User extends CActiveRecord
 			'password' => 'Password',
 			'dob' => 'Dob',
 			'date_joined' => 'Date Joined',
-			'picture_path' => 'Picture Path',
+			'userImage' => 'Picture Path',
 		);
 	}
 
@@ -142,8 +143,7 @@ class User extends CActiveRecord
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('dob',$this->dob,true);
 		$criteria->compare('date_joined',$this->date_joined,true);
-		$criteria->compare('picture_path',$this->picture_path,true);
-
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
