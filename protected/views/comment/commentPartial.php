@@ -16,7 +16,12 @@ $user=User::model()->findByPk($data[$i]->user_id);
 <br/>
 <br/>
 <div style='color: black;font-size:12px;text-align: left'>
+
+<?php echo CHtml::image($user->getFileUrl('normal'),"User's image "); ?>
+<br/ >
+<br/ >
 Name: <?php echo $user->first_name;?> <?php echo $user->last_name;?>
+
 <br/ >
 <br/ >
 Email: <?php echo $user->email;?>

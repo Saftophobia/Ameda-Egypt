@@ -153,6 +153,7 @@ function clearArea()
 '</div>'+
 '<br />'+
 '<br />'+
+
 '<div style=color:black;font-size:12px;text-align:left>'+
 'Name: '+data.first_name + ' '+data.last_name+
 '<br />'+
