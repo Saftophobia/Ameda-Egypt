@@ -36,6 +36,7 @@
 				            'visible'=>!Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Products', 'url'=>array('/product/index')),
 				array('label'=>'Forum', 'url'=>array('/category/index')),
+				array('label'=>'Stores', 'url'=>array('/stores/index')),
 				array('label'=>'Register', 'url'=>array('/user/create'),
 				                'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Admin', 'url'=>array('/admin'),
