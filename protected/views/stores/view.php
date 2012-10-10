@@ -2,10 +2,9 @@
 /* @var $this StoresController */
 /* @var $model Stores */
 
-$this->breadcrumbs=array(
-	'Stores'=>array('index'),
-	$model->name,
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Stores'=>'index.php?r=stores/index', $model->name),
+));
 
 $this->menu=array(
 	array('label'=>'List Stores', 'url'=>array('index')),
@@ -24,7 +23,7 @@ if(Yii::app()->user->checkAccess('admin'))
 
 <h1><?php echo $model->name; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php /*$this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
@@ -35,4 +34,28 @@ if(Yii::app()->user->checkAccess('admin'))
 		'email',
 		
 	),
+)); */?>
+
+
+<?php $this->widget('bootstrap.widgets.TbDetailView', array(
+	/*
+    'data'=>array('id'=>1, 'firstName'=>'Mark', 'lastName'=>'Otto', 'language'=>'CSS'),
+    'attributes'=>array(
+        array('name'=>'firstName', 'label'=>'First name'),
+        array('name'=>'lastName', 'label'=>'Last name'),
+        array('name'=>'language', 'label'=>'Language'),
+*/
+
+        'data'=>$model,
+	'attributes'=>array(
+		'id',
+		'name',
+		'phonenumber',
+		'fax',
+		'address',
+		'email',
+
+
+    ),
 )); ?>
+

@@ -2,15 +2,16 @@
 /* @var $this StoresController */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->breadcrumbs=array(
-	'Stores',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Stores'),
+));
+
 
 $this->menu=array();
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Create Product', 'url'=>array('create')));
-	array_push($this->menu,array('label'=>'Manage Products', 'url'=>array('admin')));
+	array_push($this->menu,array('label'=>'Create Store', 'url'=>array('create')));
+	array_push($this->menu,array('label'=>'Manage Stores', 'url'=>array('admin')));
 }
 ?>
 

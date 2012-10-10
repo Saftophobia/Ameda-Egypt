@@ -20,32 +20,77 @@
 
 <body>
 
+
+		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+    'type'=>'inverse', // null or 'inverse'
+    'brand'=>'Ameda Egypt',
+    'brandUrl'=>'index.php?r=site/index',
+    'collapse'=>false, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'items'=>array(
+                array('label'=>'Home', 'url'=>'index.php?r=site/index'),
+                array('label'=>'Products', 'url'=>'index.php?r=product/index'),
+                array('label'=>'Stores', 'url'=>'index.php?r=stores/index'),
+                
+                /*array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
+                    array('label'=>'Action', 'url'=>'#'),
+                    array('label'=>'Another action', 'url'=>'#'),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'NAV HEADER'),
+                    array('label'=>'Separated link', 'url'=>'#'),
+                    array('label'=>'One more separated link', 'url'=>'#'),
+                )),*/
+            ),
+        ),
+        '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'htmlOptions'=>array('class'=>'pull-right'),
+            'items'=>array(
+                array('label'=>'Forums', 'url'=>'index.php?r=category/index'),
+                '---',
+                 array('label'=>'Admin', 'url'=>'index.php?r=admin' , 'visible'=>Yii::app()->user->checkAccess('admin')),
+
+                array('label'=>'Login', 'url'=>'#','visible'=>Yii::app()->user->isGuest, 'items'=>array(
+                    array('label'=>'Login', 'url'=>'index.php?r=site/login'),
+                    array('label'=>'Register', 'url'=>'index.php?r=user/create'),
+                    '---',
+                    array('label'=>'About', 'url'=>'index.php?r=site/page&view=about'),
+                    array('label'=>'Contact Us', 'url'=>'index.php?r=site/contact'),
+                   	
+                     
+                )),
+
+                array('label'=>'Welcome, ' .Yii::app()->user->name ,'visible'=>!Yii::app()->user->isGuest, 'url'=>'#', 'items'=>array(
+                    array('label'=>'Logout', 'url'=>'index.php?r=site/logout'),
+                    '---',
+                    array('label'=>'About', 'url'=>'index.php?r=site/page&view=about'),
+                    array('label'=>'Contact Us', 'url'=>'index.php?r=site/contact'),
+                   	
+                     
+                )),
+
+                
+            ),
+        ),
+    ),
+)); ?>
+
+
+
+
+
+
 <div class="container" id="page">
 
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'),
-				                     'visible'=>!Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Contact', 'url'=>array('/site/contact'),
-				            'visible'=>!Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Products', 'url'=>array('/product/index')),
-				array('label'=>'Forum', 'url'=>array('/category/index')),
-				array('label'=>'Stores', 'url'=>array('/stores/index')),
-				array('label'=>'Register', 'url'=>array('/user/create'),
-				                'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Admin', 'url'=>array('/admin'),
-				                'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
+
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
