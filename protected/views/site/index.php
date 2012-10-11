@@ -3,7 +3,22 @@
 
 $this->pageTitle="Ameda Egypt";
 ?>
+<style type="text/css">
+    .paragraph{
+          margin-left:auto;
+         margin-right:auto;
+         width:80%;
+    }
+  .slider {
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
 
+}
+  </style>
+
+
+<div class="paragraph">
 <h1>AMEDA...</h1>
 
 <p>Ameda breastfeeding products have been serving the needs of Mothers and babies for well over 50 years.</p>
@@ -19,7 +34,7 @@ $this->pageTitle="Ameda Egypt";
 
 <p>If you are not sure of the product you require please access the <a href="index.php?r=Product"> Product List</a>.</p>
 
-
+</div>
 
 
 <br/>
@@ -27,6 +42,8 @@ $this->pageTitle="Ameda Egypt";
 <br/>
 
 
+
+<div class="slider">
 <?php
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
@@ -41,3 +58,4 @@ $this->pageTitle="Ameda Egypt";
             )
         );
         ?>
+</div>
