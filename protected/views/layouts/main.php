@@ -54,9 +54,17 @@
             'items'=>array(
                 array('label'=>'Forums', 'url'=>'index.php?r=category/index'),
                 '---',
-                 array('label'=>'Admin', 'url'=>'index.php?r=admin' , 'visible'=>Yii::app()->user->checkAccess('admin')),
+                 array('label'=>'Admin', 'visible'=>Yii::app()->user->checkAccess('admin'), 'items' =>array( 
+                    array('label'=>'Manage Products', 'url'=>'index.php?r=product/admin'),
+                    array('label'=>'Manage Stores', 'url'=>'index.php?r=stores/admin'),
+                    array('label'=>'Manage Categories', 'url'=>'index.php?r=category/admin'),
+                    array('label'=>'Manage Users', 'url'=>'index.php?r=user/admin'),
+                    
 
-                array('label'=>'Login', 'url'=>'#','visible'=>Yii::app()->user->isGuest, 'items'=>array(
+
+                  )),
+
+                array('label'=>'Login','visible'=>Yii::app()->user->isGuest, 'items'=>array(
                     array('label'=>'Login', 'url'=>'index.php?r=site/login'),
                     array('label'=>'Register', 'url'=>'index.php?r=user/create'),
                     '---',
