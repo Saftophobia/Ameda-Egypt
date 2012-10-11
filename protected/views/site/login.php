@@ -1,12 +1,17 @@
+<div style="  margin-left:auto;
+         margin-right:auto;
+         width:80%;">
+
+
 <?php
 /* @var $this SiteController */
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 
 $this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Login'),
+));
 ?>
 
 <h1>Login</h1>
@@ -53,3 +58,4 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>

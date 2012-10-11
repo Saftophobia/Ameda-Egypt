@@ -1,13 +1,22 @@
+
+
+
+<div style="  margin-left:auto;
+         margin-right:auto;
+         width:80%;">
 <?php
 /* @var $this SiteController */
 /* @var $model ContactForm */
 /* @var $form CActiveForm */
 
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
-$this->breadcrumbs=array(
-	'Contact',
-);
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Contact Us'),
+));
 ?>
+
+
 
 <h1>Contact Us</h1>
 
@@ -83,3 +92,5 @@ If you have business inquiries or other questions, please fill out the following
 </div><!-- form -->
 
 <?php endif; ?>
+
+</div>
