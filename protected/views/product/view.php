@@ -55,7 +55,6 @@ if(Yii::app()->user->checkAccess('admin'))
 
         'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'name',
 		'video_path',
 		'price',

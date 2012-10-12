@@ -2,15 +2,10 @@
 /* @var $this ProductController */
 /* @var $model Product */
 
-$this->breadcrumbs=array(
-	'Products'=>array('index'),
-	'Create',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Products'=>'index.php?r=product/index','Create'),
+));
 
-$this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
-	
-);
 ?>
 
 <h1>Create Product</h1>

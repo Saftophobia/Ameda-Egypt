@@ -2,13 +2,11 @@
 /* @var $this ProductController */
 /* @var $model Product */
 
-$this->breadcrumbs=array(
-	'Admin'=>array('/admin/default/index'),
-	'Manage',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Products'=>'index.php?r=product/index','Manage'),
+));
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
 	array('label'=>'Create Product', 'url'=>array('create')),
 );
 
