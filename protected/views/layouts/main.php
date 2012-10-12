@@ -74,7 +74,8 @@
                      
                 )),
 
-                array('label'=>'Welcome, ' .Yii::app()->user->name ,'visible'=>!Yii::app()->user->isGuest, 'url'=>'#', 'items'=>array(
+                array('label'=>'Welcome, ' .Yii::app()->user->name ,'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
+                    array('label'=>'Profile', 'url'=>'index.php?r=user/view&id='.Yii::app()->user->id),
                     array('label'=>'Logout', 'url'=>'index.php?r=site/logout'),
                     '---',
                     array('label'=>'About', 'url'=>'index.php?r=site/page&view=about'),
