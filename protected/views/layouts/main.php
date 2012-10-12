@@ -47,11 +47,12 @@
                 )),*/
             ),
         ),
-        '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+       // '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
+                array('label'=>'Hot Topics', 'url'=>'index.php?r=thread/HotTopics'),  
                 array('label'=>'Forums', 'url'=>'index.php?r=category/index'),
                 '---',
                  array('label'=>'Admin', 'visible'=>Yii::app()->user->checkAccess('admin'), 'items' =>array( 
