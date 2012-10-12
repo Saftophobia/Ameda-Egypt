@@ -17,8 +17,31 @@ $this->pageTitle="Ameda Egypt";
 }
   </style>
 
+</br>
+</br>
+
+<?php $this->beginWidget('bootstrap.widgets.TbHeroUnit', array(
+    'heading'=>'Ameda Egypt',
+)); ?>
+  </br>
+  </br>
+    <p>Our website aims to provide education and information for breastfeeding Mothers and to support them in their efforts to provide precious breast milk to their babies for as long as they wish.</p>
+    <p><?php $this->widget('bootstrap.widgets.TbButton', array(
+        'type'=>'primary',
+        'size'=>'large',
+        'label'=>'Learn more',
+        'url'=>'index.php?r=site/page&view=about',
+        
+    )); ?></p>
+ 
+<?php $this->endWidget(); ?>
+
+
 
 <div class="paragraph">
+
+
+
 <h1>AMEDA...</h1>
 
 <p>Ameda breastfeeding products have been serving the needs of Mothers and babies for well over 50 years.</p>
