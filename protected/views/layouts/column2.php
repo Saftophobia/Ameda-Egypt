@@ -5,7 +5,7 @@
 		<?php echo $content; ?>
 	</div><!-- content -->
 
-<div class="span2">
+<div class="span3">
 
 	<?php $this->widget('bootstrap.widgets.TbMenu', array(
     'type'=>'list',

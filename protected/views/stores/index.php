@@ -10,8 +10,9 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 $this->menu=array();
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Create Store', 'url'=>array('create')));
-	array_push($this->menu,array('label'=>'Manage Stores', 'url'=>array('admin')));
+	array_push($this->menu,array('label'=>'Manage Stores', 'icon'=>'book', 'url'=>array('admin')));
+    array_push($this->menu,array('label'=>'Create Store', 'icon'=>'pencil', 'url'=>array('create')));
+   
 }
 ?>
 

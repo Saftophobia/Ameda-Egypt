@@ -9,8 +9,10 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 $this->menu=array();
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Create Product', 'url'=>array('create')));
-	array_push($this->menu,array('label'=>'Manage Products', 'url'=>array('admin')));
+    array_push($this->menu,array('label'=>'Manage Products', 'icon'=>'book', 'url'=>array('admin')));
+    array_push($this->menu,array('label'=>'Create Product', 'icon'=>'pencil', 'url'=>array('create')));
+   
+
 }
 ?>
 
@@ -24,11 +26,11 @@ if(Yii::app()->user->checkAccess('admin'))
 
 
 
-<?php $this->widget('bootstrap.widgets.TbMenu', array(
+<?php /*$this->widget('bootstrap.widgets.TbMenu', array(
     'type'=>'list',
     'items'=>array(
         array('label'=>'LIST HEADER'),
-        array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
+        array('label'=>'Home', 'icon'=>'home', 'url'=>'#'),
         array('label'=>'Library', 'icon'=>'book', 'url'=>'#'),
         array('label'=>'Application', 'icon'=>'pencil', 'url'=>'#'),
         array('label'=>'ANOTHER LIST HEADER'),
@@ -36,6 +38,6 @@ if(Yii::app()->user->checkAccess('admin'))
         array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
         array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
     ),
-)); ?>
+)); */?>
 
 

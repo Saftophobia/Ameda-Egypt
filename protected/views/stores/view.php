@@ -7,13 +7,13 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 ));
 
 $this->menu=array(
-	array('label'=>'List Stores', 'url'=>array('index')),
+	array('label'=>'List Stores', 'icon'=>'flag', 'url'=>array('index')),
+    
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Edit Stores', 'url'=>array('update', 'id'=>$model->id)));
-	array_push($this->menu,array('label'=>'Create Stores', 'url'=>array('create')));
-}
+	array_push($this->menu,array('label'=>'Edit Store', 'icon'=>'book', 'url'=>array('update', 'id'=>$model->id)));
+    }
 ?>
 
 

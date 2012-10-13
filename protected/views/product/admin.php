@@ -7,7 +7,8 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 ));
 
 $this->menu=array(
-	array('label'=>'Create Product', 'url'=>array('create')),
+	array('label'=>'Create Product', 'icon'=>'pencil', 'url'=>array('create')),
+    
 );
 
 Yii::app()->clientScript->registerScript('search', "

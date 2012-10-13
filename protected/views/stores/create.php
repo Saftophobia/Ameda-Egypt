@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Stores', 'url'=>array('index')),
-	array('label'=>'Manage Stores', 'url'=>array('admin')),
+	array('label'=>'Create Store', 'icon'=>'pencil', 'url'=>array('create')),
+    
 );
 ?>
 
