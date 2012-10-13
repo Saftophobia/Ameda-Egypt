@@ -4,6 +4,10 @@
 ?>
 
 <div class="view">
+	<div class="row-fluid">
+	<div class="span8">
+
+
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->id)); ?>
@@ -24,10 +28,12 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
-
+</div>
 
 	<br />
 	<br />
+	<div class="span4">
+
 	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
 	<br />
 
@@ -49,4 +55,4 @@
 
 	*/ ?>
 
-</div>
+</div></div></div>

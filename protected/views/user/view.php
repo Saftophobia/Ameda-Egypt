@@ -16,8 +16,17 @@ if(Yii::app()->user->id==$model->id)
 
 <h1><?php echo $model->first_name; ?> <?php echo $model->last_name; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
+
+<?php $this->widget('bootstrap.widgets.TbDetailView', array(
+	/*
+    'data'=>array('id'=>1, 'firstName'=>'Mark', 'lastName'=>'Otto', 'language'=>'CSS'),
+    'attributes'=>array(
+        array('name'=>'firstName', 'label'=>'First name'),
+        array('name'=>'lastName', 'label'=>'Last name'),
+        array('name'=>'language', 'label'=>'Language'),
+*/
+
+        'data'=>$model,
 	'attributes'=>array(
 		'username',
 		'first_name',
@@ -26,8 +35,12 @@ if(Yii::app()->user->id==$model->id)
 		'info',
 		'dob',
 		'date_joined',
-	),
+
+
+    ),
 )); ?>
+
+
 
 
 <br />
