@@ -3,19 +3,6 @@
 
 $this->pageTitle="Ameda Egypt";
 ?>
-<style type="text/css">
-    .paragraph{
-          margin-left:auto;
-         margin-right:auto;
-         width:80%;
-    }
-  .slider {
-    margin-left:auto;
-    margin-right:auto;
-    width:70%;
-
-}
-  </style>
 
 </br>
 </br>
@@ -38,35 +25,88 @@ $this->pageTitle="Ameda Egypt";
 
 
 
-<div class="paragraph">
+
+
+  
+       <ul class="thumbnails">
+    <li class="span4">
+    <div class="thumbnail">
+
+    <img src="http://www.ameda.com/sites/default/files/why_breastfeed.jpg" alt="">
+   <h3>Ameda Products</h3>
+    <p>Ameda provides the highest quality breastfeeding products and education. Our mission is to help empower mothers to meet their breastfeeding goals by providing products that make breastfeeding more comfortable and breast pumping easier. We know how much breastfeeding matters.</p>
+    
+ 
+    <div class="offset2">
+   <?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'View Products',
+    'type'=>'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    'url'=>'index.php?r=product/index',
+    )); ?>
+  </div>
+    
+
+
+    </div>
+    </li>
+   
+    <li class="span4">
+    
+    <div class="thumbnail">
+   
+    <img src="http://www.ameda.com/sites/default/files/your_first_day_back-_0.jpg" alt="">
+   <h3>The Daily Feed</h3>
+    <p>Who better to shed light on what breastfeeding is really all about than real moms?
+Learn and get advice from your fellow moms here - we're all in this together!</p>
+
+ 
+    <div class="offset2">
+   <?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Hot Topics',
+    'type'=>'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    'url'=>'index.php?r=thread/HotTopics',
+    )); ?>
+  </div>
+
+
+    </div>
+    </li>
+  
+   <li class="span4">
+    <div class="thumbnail">
+
+    <img src="http://www.ameda.com/sites/all/themes/ameda/img/nurse.jpg" alt="">
+    <h3>Healthcare Professionals</h3>
+    <p>The Ameda Connections Program provides clinicians who support breastfeeding mothers with value-laden mailings of educational materials, special offers, and clinical information. Join now to receive exclusive mailings for you and your mothers.</p>
+    
+    <div class="offset2">
+   <?php $this->widget('bootstrap.widgets.TbButton', array(
+    'label'=>'Join now!',
+    'type'=>'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+    'size'=>'small', // null, 'large', 'small' or 'mini'
+    'url'=>'index.php?r=user/create',
+    )); ?>
+  </div>
+    </div>
+
+    </li>
+    
+
+    </ul>
 
 
 
-<h1>AMEDA...</h1>
-
-<p>Ameda breastfeeding products have been serving the needs of Mothers and babies for well over 50 years.</p>
-
-<p>We know how much breastfeeding matters to you and your baby.</p>
-
-<p>Our website aims to provide education and information for breastfeeding Mothers and to support them in their efforts to provide precious breast milk to their babies for as long as they wish.  At times this may require the assistance of a quality breast pump or breastfeeding accessory and these can be found within this website.</p>
-
-<p>If you have been referred to this site you can now go to the On-Line shop to order your pump or accessory.</p>
-
-
-
-
-<p>If you are not sure of the product you require please access the <a href="index.php?r=Product"> Product List</a>.</p>
-
-</div>
 
 
 <br/>
 <br/>
 <br/>
 
+<div class="row-fluid">
+<div class = "offset2">
 
-
-<div class="slider">
 <?php
         $this->widget('ext.slider.slider', array(
             'container'=>'slideshow',
@@ -80,5 +120,5 @@ $this->pageTitle="Ameda Egypt";
             'urls'=>Product::returnproduct(),
             )
         );
-        ?>
-</div>
+ ?>
+</div></div>
