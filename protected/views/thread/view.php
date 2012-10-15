@@ -30,12 +30,12 @@ else
 ?>
 
 
-<table>
+<table style="margin-top:70px">
 <caption style="text-align:left;background-color: #00547A;color:white;">
 <?php echo $model->created_at?>
 </caption>
 <tr>
-<td style="background-color:#e9e9e9 ;vertical-align:top;width: 100px; height: 270px;">
+<td style="word-wrap:break-word;max-width:200px;min-width:200px;background-color:#e9e9e9 ;vertical-align:top;width: 200px; height: 270px;">
 <div style="font-size: 30px; font-weight:bold; ">
 <?php $user=User::model()->findByPk($model->user_id);?>
 <br/>
@@ -60,7 +60,7 @@ Date Joined: <?php echo $user->date_joined;?>
 
 </div>
 </td>
-<td style="vertical-align:top;text-align:left;color:black;width: 300px; height: 270px;">
+<td style="word-wrap:break-word;max-width:400px;min-width:400px;vertical-align:top;text-align:left;color:black;width: 400px; height: 270px;">
 <h3 style="font-size:15px;">
 <?php echo $model->title; ?>
 <br />
@@ -147,15 +147,15 @@ function clearArea()
 + data.created_at.toString()+
 '</caption>'+
 '<tr>'+
-'<td style=background-color:#e9e9e9;vertical-align:top;width:100px;height:150px;>'+
-'<div>'+
-'<a href=x style=font-size:30px;font-weight:bold;>'+data.username+'</a>'+
+'<td style=word-wrap:break-word;max-width:200px;min-width:200px;background-color:#e9e9e9;vertical-align:top;width:200px;height:150px;>'+
+'<div style=color:black;font-size:12px;text-align:left>'+
+'<div style=text-align:center;margin-top:20px;>'+
+'<img src = \'' + data.image +'\'/> '+
 '</div>'+
 '<br />'+
-'<br />'+
-
-'<div style=color:black;font-size:12px;text-align:left>'+
-'<img src = \'' + data.image +'\'/> '+
+'<div style=text-align:center;>'+
+'<a href=x style=font-size:30px;font-weight:bold;>'+data.username+'</a>'+
+'</div>'+
 '<br />'+
 '<br />'+
 'Name: '+data.first_name + ' '+data.last_name+
@@ -169,7 +169,7 @@ function clearArea()
 '<br />'+
 '</div>'+
 '</td>'+
-'<td style=vertical-align:top;text-align:left;color:black;width:300px;height:150px;>'+
+'<td style=word-wrap:break-word;max-width:400px;min-width:400px;vertical-align:top;text-align:left;color:black;width:400px;height:150px;>'+
 '<hr />'+
 '<div style=font-size:25px;>'+
 data.content+
@@ -192,6 +192,8 @@ for(var i=0; i<len;i++)
 $('a[href*=x]').each(function(){
   this.href = url+'r=user/view&id='+data.id;
 });
+document.getElementById('commenttextarea').value='Write a comment...';
+
 
 	            				
 	            				
