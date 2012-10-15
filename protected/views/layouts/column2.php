@@ -16,6 +16,7 @@
 		));
 		$this->endWidget();
 	?>
+>
 	</div><!-- sidebar -->
 
 </div>

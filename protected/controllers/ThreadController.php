@@ -29,6 +29,10 @@ class ThreadController extends Controller
 	public function accessRules()
 	{
 		return array(
+			array('allow',
+				'actions'=>array('hotTopics'),
+				'users'=>array('*'),
+				),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update','admin','delete','index','view','lock'),
 				'users'=>array('@'),
@@ -39,6 +43,33 @@ class ThreadController extends Controller
 		);
 	}
 
+public function actionHotTopics()
+{	
+	$categoriesID= Category::model()->findAll(
+	array(
+    'condition'=>'name=:name',
+    'params'=>array(':name'=> 'Hot Topics'),
+	));
+
+	$model=Thread::model()->findAll(array(
+    'condition'=>'category_id=:category_id',
+    'params'=>array(':category_id'=> $categoriesID[0]->id,),
+));
+
+
+$gridDataProvider = new CArrayDataProvider($model);
+
+
+	$this->render('HotTopics',array(
+		'model'=>$model,
+		'gridDataProvider'=>$gridDataProvider,
+
+
+
+		));
+
+
+}
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed

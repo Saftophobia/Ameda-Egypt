@@ -4,6 +4,9 @@
 ?>
 
 <div class="view">
+<div class="row-fluid">
+	<div class="span8">
+
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->name), array('view', 'id'=>$data->id)); ?>
@@ -28,6 +31,7 @@
 
 	
 
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />
@@ -36,8 +40,12 @@
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />
 	<br />
+</div>
+<div class="span4">
+
 	<?php echo CHtml::image(Product::returnimageslocation($data->id)," No image available"); ?>
 	<br />
 
-
+</div>
+</div>
 </div>

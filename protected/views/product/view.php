@@ -17,12 +17,14 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 
 
 $this->menu=array(
-	array('label'=>'List Product', 'url'=>array('index')),
+	array('label'=>'List Products', 'icon'=>'flag', 'url'=>array('index')),
+    
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Edit Product', 'url'=>array('update', 'id'=>$model->id)));
-	array_push($this->menu,array('label'=>'Create Product', 'url'=>array('create')));
+	
+	array_push($this->menu,array('label'=>'Edit Product', 'icon'=>'book', 'url'=>array('update', 'id'=>$model->id)));
+        
 }
 ?>
 
