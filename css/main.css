@@ -24,12 +24,22 @@ body
 
 #content
 {
-    padding: 20px;
+    padding:0px;
+    max-width:650px;
+    width:650px;
+    float:left;
 }
 
 #sidebar
 {
-	padding: 20px 20px 20px 0;
+	padding-top: 70px;
+	max-width:160px;
+	width:160px;
+	float:right;
+	text-align:center;
+	padding-left:40px;
+
+
 }
 
 #footer
