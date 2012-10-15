@@ -11,7 +11,7 @@ $this->menu=array(
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,	array('label'=>'Manage Comment', 'url'=>array('admin')));
+	array_push($this->menu,	array('label'=>'Manage Comment','icon'=>'book', 'url'=>array('admin')));
 }
 ?>
 

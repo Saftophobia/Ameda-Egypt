@@ -109,11 +109,12 @@
 
 	<?php echo $content; ?>
 	  
-</br></br></br></br></br>
-
+</br>
+ </div>
 	<div id="footer">
+<hr/>
   <div align="center">
-  <hr/>
+  
 	<?php if(!Yii::app()->user->isGuest):?>
 	    <?php 
 	    $models=Category::model()->findAll();

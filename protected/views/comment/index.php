@@ -7,11 +7,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Comment', 'url'=>array('create')),
+	array('label'=>'Create Comment','icon'=>'pencil', 'url'=>array('create')),
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,	array('label'=>'Manage Comment', 'url'=>array('admin')));
+	array_push($this->menu,	array('label'=>'Manage Comment', 'icon'=>'book','url'=>array('admin')));
 }
 ?>
 

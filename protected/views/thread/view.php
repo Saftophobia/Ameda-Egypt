@@ -9,21 +9,21 @@ $this->breadcrumbs=array(
 );
 $cid=Thread::model()->findByPk($model->id)->category_id;
 $this->menu=array(
-	array('label'=>'Create Thread', 'url'=>array('create','cid'=>$cid)),
+	array('label'=>'Create Thread','icon'=>'pencil' ,'url'=>array('create','cid'=>$cid)),
 );
 
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Lock Thread', 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
-	array_push($this->menu,	array('label'=>'Manage Comments', 'url'=>array('/comment/admin','tid'=>$model->id)));
+	array_push($this->menu,array('label'=>'Lock Thread','icon'=>'pencil' , 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
+	array_push($this->menu,	array('label'=>'Manage Comments', 'icon'=>'book' ,'url'=>array('/comment/admin','tid'=>$model->id)));
 }
 else
 {
 	if(Yii::app()->user->id == $model->user_id)
 	{
-		array_push($this->menu,array('label'=>'Lock Thread', 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
+		array_push($this->menu,array('label'=>'Lock Thread', 'icon'=>'pencil' ,'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('lock','id'=>$model->id),'confirm'=>'Are you sure you want to lock this thread?')));
 
-		array_push($this->menu,array('label'=>'Report Thread', 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('report','id'=>$model->id),'confirm'=>'Are you sure you want to report this thread?')));
+		array_push($this->menu,array('label'=>'Report Thread','icon'=>'pencil' , 'url'=>array('#','cid'=>$cid), 'linkOptions'=>array('submit'=>array('report','id'=>$model->id),'confirm'=>'Are you sure you want to report this thread?')));
 		
 	}
 }

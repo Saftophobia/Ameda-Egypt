@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Create Category', 'url'=>array('create')));
-	array_push($this->menu,	array('label'=>'Manage Category', 'url'=>array('admin')));
+	array_push($this->menu,array('label'=>'Create Category','icon'=>'flag', 'url'=>array('create')));
+	array_push($this->menu,	array('label'=>'Manage Category','icon'=>'book', 'url'=>array('admin')));
 }
 ?>
 

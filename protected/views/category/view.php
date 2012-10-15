@@ -8,14 +8,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
+	array('label'=>'List Category', 'icon'=>'flag','url'=>array('index')),
 );
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'Create Category', 'url'=>array('create')));
-	array_push($this->menu,	array('label'=>'Manage Threads', 'url'=>array('/thread/admin','cid'=>$model->id)));
+	array_push($this->menu,array('label'=>'Create Category','icon'=>'pencil' ,'url'=>array('create')));
+	array_push($this->menu,	array('label'=>'Manage Threads', 'icon'=>'book','url'=>array('/thread/admin','cid'=>$model->id)));
 }
-array_push($this->menu,array('label'=>'Create Thread', 
+array_push($this->menu,array('label'=>'Create Thread','icon'=>'pencil',
                              'url'=>array('thread/create','cid'=>$model->id)));
 ?>
 

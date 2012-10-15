@@ -9,9 +9,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Comment', 'url'=>array('create')),
-	array('label'=>'View Comment', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Comment', 'url'=>array('admin')),
+	array('label'=>'Create Comment','icon'=>'pencil', 'url'=>array('create')),
+	array('label'=>'View Comment','icon'=>'flag', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Comment', 'icon'=>'book','url'=>array('admin')),
 );
 ?>
 

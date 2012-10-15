@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Category', 'url'=>array('index')),
-	array('label'=>'Create Category', 'url'=>array('create')),
-	array('label'=>'View Category', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Category', 'url'=>array('admin')),
+	array('label'=>'List Category','icon'=>'flag', 'url'=>array('index')),
+	array('label'=>'Create Category','icon'=>'pencil','url'=>array('create')),
+	array('label'=>'View Category','icon'=>'flag' ,'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Category','icon'=>'book' ,'url'=>array('admin')),
 );
 ?>
 

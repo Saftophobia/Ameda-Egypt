@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 );
 $cid=Thread::model()->findByPk($model->id)->category_id;
 $this->menu=array(
-	array('label'=>'Create Thread', 'url'=>array('create','cid'=>$cid)),
+	array('label'=>'Create Thread','icon'=>'pencil', 'url'=>array('create','cid'=>$cid)),
 );
 ?>
 
