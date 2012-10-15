@@ -5,6 +5,11 @@
 
 <div class="view">
 
+	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
+	<br />
+	<br />
+	
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->id)); ?>
 	<br />
@@ -23,12 +28,6 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
-	<br />
-
-
-	<br />
-	<br />
-	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
 	<br />
 
 
