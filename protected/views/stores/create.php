@@ -2,10 +2,10 @@
 /* @var $this StoresController */
 /* @var $model Stores */
 
-$this->breadcrumbs=array(
-	'Stores'=>array('index'),
-	'Create',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Stores'=>array('index'), 'Create' ),
+));
+
 
 $this->menu=array(
 	array('label'=>'Create Store', 'icon'=>'pencil', 'url'=>array('create')),

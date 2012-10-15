@@ -2,11 +2,14 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
-);
+
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Users'=>array('index'),
+	$model->username=>array('view','id'=>$model->id),
+	'Update',),
+));
+
 
 $this->menu=array(
 	array('label'=>'View User', 'url'=>array('view', 'id'=>$model->id)),

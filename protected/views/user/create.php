@@ -2,10 +2,12 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
-);
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Users'=>array('index'),
+	'Create',),
+));
+
 
 $this->menu=array();
 if(Yii::app()->user->checkAccess('admin'))

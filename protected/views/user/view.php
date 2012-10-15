@@ -2,10 +2,10 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->username,
-);
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Users'=>array('index'), $model->username ),
+));
 
 $this->menu=array();
 if(Yii::app()->user->id==$model->id)
