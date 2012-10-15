@@ -2,10 +2,10 @@
 /* @var $this CategoryController */
 /* @var $model Category */
 
-$this->breadcrumbs=array(
-	'Admin'=>array('/admin/default/index'),
-	'Manage',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Categories'=>'index.php?r=category/index','Manage'),
+));
+
 
 $this->menu=array(
 	array('label'=>'List Category','icon'=>'flag', 'url'=>array('index')),
@@ -40,16 +40,29 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+
+
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+
 	'id'=>'category-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'columns'=>array(
+    	/*
+        array('name'=>'id', 'header'=>'#'),
+        array('user_id', 'header'=>'First name'),
+        array('name'=>'lastName', 'header'=>'Last name'),
+        array('name'=>'language', 'header'=>'Language'),*/
+'id',
 		'name',
 		'user_id',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
+
+
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+        ),
+    ),
 )); ?>

@@ -2,10 +2,9 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->breadcrumbs=array(
-	'Admin'=>array('/admin/default/index'),
-	'Manage',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Users'=>'index.php?r=user/index','Manage'),
+));
 
 $this->menu=array();
 
@@ -42,24 +41,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
 
- $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'user-grid',
 	'ajaxUpdate'=>true,
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'columns'=>array(
+'id',
 		'first_name',
 		'last_name',
 		'email',
 		'username',
-		array(
-			'class'=>'CButtonColumn',
-			'template'=>'{view}',
-		),
-		array(
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'template'=>'{view}',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+        ),
+
+        array(
 			"type"=>"raw",
 			"value"=>'CHtml::ajaxLink(
 				'.'$data->locked?'.'"UnBlock"'.':'.'"Block"'.',
@@ -86,9 +88,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 				)',
 				
 			),
-	),
-)); ?>
 
+    ),
+)); ?>
 
 
 

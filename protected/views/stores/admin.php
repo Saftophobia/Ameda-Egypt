@@ -2,11 +2,11 @@
 /* @var $this StoresController */
 /* @var $model Stores */
 
-$this->breadcrumbs=array(
-	//'Stores'=>array('index'),
-	'Admin'=>array('/admin/default/index'),
-	'Manage',
-);
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Stores'=>'index.php?r=stores/index','Manage'),
+));
+
+
 
 $this->menu=array(
 	array('label'=>'List Stores', 'url'=>array('index')),
@@ -41,23 +41,33 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+
+
+
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+
 	'id'=>'stores-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'user_id',
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'columns'=>array(
+    	/*
+        array('name'=>'id', 'header'=>'#'),
+        array('user_id', 'header'=>'First name'),
+        array('name'=>'lastName', 'header'=>'Last name'),
+        array('name'=>'language', 'header'=>'Language'),*/
+'user_id',
 		'name',
 		'phonenumber',
 		'fax',
 		'address',
-		/*
-		'email',
-		'created_at',
 		'updated_at',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
+
+
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+        ),
+    ),
 )); ?>

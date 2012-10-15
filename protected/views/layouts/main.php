@@ -110,7 +110,7 @@
 	<?php echo $content; ?>
 	  
 </br>
- </div>
+ 
 	<div id="footer">
 <hr/>
   <div align="center">
@@ -216,6 +216,6 @@
 	</div><!-- footer -->
 
 </div><!-- page -->
-
+</div>
 </body>
 </html>

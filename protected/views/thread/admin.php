@@ -2,10 +2,12 @@
 /* @var $this ThreadController */
 /* @var $model Thread */
 
-$this->breadcrumbs=array(
-	'Admin'=>array('/admin/default/index'),
-	'Manage',
-);
+
+$this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+    'links'=>array('Category'=>'index.php?r=category/view&id='.$model->category_id,'Manage'),
+));
+
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -34,21 +36,30 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'thread-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
+
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+
+	'id'=>'threads-grid',
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'columns'=>array(
+    	/*
+        array('name'=>'id', 'header'=>'#'),
+        array('user_id', 'header'=>'First name'),
+        array('name'=>'lastName', 'header'=>'Last name'),
+        array('name'=>'language', 'header'=>'Language'),*/
 		'id',
 		'user_id',
 		'title',
 		'created_at',
 		'updated_at',
-		/*
-		'content',
-		*/
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
+
+        array(
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+        ),
+    ),
 )); ?>
+
