@@ -110,7 +110,9 @@ class UserController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		if(!Yii::app()->user->checkAccess('admin'))
+		if(Yii::app()->request->isAjaxRequest)
+		{
+		if(!Yii::app()->user->checkAccess('admin')&&Yii::app()->user->id!=1)
 		{
 			throw new CHttpException(403,'You are not authorized to perform this action.');
 		}
@@ -121,12 +123,18 @@ class UserController extends Controller
 		else
 			$model->locked=false;
 		$model->save(false);
+		echo CJSON::encode(array("state"=>$model->locked,
+								  "msg"=>$model->username.' is '.($model->locked?'blocked':'unblocked'),
+								  "id"=>$model->id));
+		
+		}
+		 else
+			throw new CHttpException(400,'invalid request');
+
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
-
+	
 	/**
 	 * Lists all models.
 	 */
