@@ -5735,11 +5735,14 @@ a.badge:hover {
 
 .hero-unit {
   padding: 60px;
+  color: black;
   margin-bottom: 30px;
   background-color: #eeeeee;
+  background: url('../../../images/Homepage/herounit.jpg');
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+  background-size: 100%;        
 }
 
 .hero-unit h1 {
