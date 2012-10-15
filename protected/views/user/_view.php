@@ -4,16 +4,7 @@
 ?>
 
 <div class="view">
-	<div class="row-fluid">
-	<div class="span8">
-
-	<div class="span4">
-	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
-	</div>
-	<br />
-	<br />
-	
-
+	<div class="span4" >
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->username), array('view', 'id'=>$data->id)); ?>
 	<br />
@@ -32,25 +23,14 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
 	<?php echo CHtml::encode($data->email); ?>
-	<br />
+	</div>
+
+
+	<div class="row-fluid" style="margin-left:380px;">
+	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
+	</div>
+	
+
+
+	 
 </div>
-
-
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('dob')); ?>:</b>
-	<?php echo CHtml::encode($data->dob); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_joined')); ?>:</b>
-	<?php echo CHtml::encode($data->date_joined); ?>
-	<br />
-
-
-	*/ ?>
-
-</div></div></div>
