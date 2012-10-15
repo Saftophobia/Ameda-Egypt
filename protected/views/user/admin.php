@@ -35,7 +35,6 @@ $('.search-form form').submit(function(){
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
-
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
@@ -43,21 +42,53 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+
+ $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'user-grid',
+	'ajaxUpdate'=>true,
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		
 		'first_name',
 		'last_name',
 		'email',
-		'confirmed_email',
 		'username',
 		array(
 			'class'=>'CButtonColumn',
-			'template'=>'{view} {delete}',
+			'template'=>'{view}',
 		),
+		array(
+			"type"=>"raw",
+			"value"=>'CHtml::ajaxLink(
+				'.'$data->locked?'.'"UnBlock"'.':'.'"Block"'.',
+
+				Yii::app()->createUrl("/user/delete",array("id"=>$data->id)),
+
+				array(
+				"data"=>array("id"=>$data->id),
+				"type"=>"post",
+				"dataType"=>"json",
+				"success"=>"function(data)
+							{
+								alert(data.msg);
+								if(data.state==true)
+									document.getElementById(data.id).innerHTML='."'UnBlock'".';
+								else
+									document.getElementById(data.id).innerHTML='."'Block'".';
+							}",
+				),
+					array(
+					"id"=>'.'"$data->id"'.',
+					)
+					
+				)',
+				
+			),
 	),
 )); ?>
+
+
+
+
