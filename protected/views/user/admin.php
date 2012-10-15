@@ -10,7 +10,7 @@ $this->menu=array();
 
 if(Yii::app()->user->checkAccess('admin'))
 {
-	array_push($this->menu,array('label'=>'List User', 'url'=>array('index')));
+	array_push($this->menu,array('label'=>'List Users','icon'=>'book', 'url'=>array('index')));
 	
 }
 
@@ -29,7 +29,7 @@ $('.search-form form').submit(function(){
 ?>
 
 <h1>Manage Users</h1>
-
+<div style='width:125%'>
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
@@ -94,3 +94,4 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 
 
+</div>
