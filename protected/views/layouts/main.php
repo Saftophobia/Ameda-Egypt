@@ -111,6 +111,8 @@
 	<?php echo $content; ?>
 	  
 	<div id="footer">
+  <div align="center">
+  <hr/>
 	<?php if(!Yii::app()->user->isGuest):?>
 	    <?php 
 	    $models=Category::model()->findAll();
@@ -121,8 +123,10 @@
                                                    'style'=>'width: 400px;',
                                                    'selected'=>'0',
                                                    'onchange'=>'redirectToCategory()',
+                                            
                                                    ));
 	    ?>
+      </div>
 		<br/>
 
 
@@ -149,7 +153,6 @@
 		}
 		</script>
 <?php endif;?>
-<br/>
 <br/>
 <div align="center">
 	<div class="clear"></div>
