@@ -24,7 +24,7 @@ array_push($this->menu,array('label'=>'Create Thread',
 
 <div>
 
-<table >
+<table>
 
 
 <tr  style="background:white url(css/bg.gif);">
@@ -63,7 +63,11 @@ $lastUser=User::model()->findByPk($totalComments[$countComments-1]->user_id);
 	<td style="font-weight: bold;font-size: x-small;">
 
 	<?php if($countComments>0): ?>
-	<?php echo CHtml::encode($totalComments[$countComments-1]->content);?>
+	<?php 
+		$lastcomment=$totalComments[$countComments-1]->content;
+		if(strlen($lastcomment)>10)
+			$lastcomment=substr($lastcomment,0,10).'...';
+		echo CHtml::encode($lastcomment);?>
 	<br />
 	by: <?php echo CHtml::link($lastUser->username,array('/user/view','id'=>$lastUser->id));?>
 	<br/>
