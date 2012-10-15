@@ -1,3 +1,5 @@
+
+<div style="width: 125%">
 <?php
 
 
@@ -11,11 +13,11 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 
 
 ?>
-
+</div>
 
 <h1>Hot Topics</h1>
 
-
+<div style="width: 125%">
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
     'type'=>'striped condensed',
     'dataProvider'=>$gridDataProvider,
@@ -30,6 +32,6 @@ $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
 )); ?>
 
 
-
+</div>
 
 
