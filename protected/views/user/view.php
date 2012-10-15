@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Users'=>array('index'),
-	$model->id,
+	$model->username,
 );
 
 $this->menu=array();
@@ -15,7 +15,12 @@ if(Yii::app()->user->id==$model->id)
 ?>
 
 <h1><?php echo $model->first_name; ?> <?php echo $model->last_name; ?></h1>
-
+<div>
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"User's image "); ?></a>
+</div>
+<br />
+<br />
+<br />
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -30,8 +35,5 @@ if(Yii::app()->user->id==$model->id)
 )); ?>
 
 
-<br />
-<br />
-<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"User's image "); ?></a>
-<br />
+
 
