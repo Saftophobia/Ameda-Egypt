@@ -16,6 +16,19 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+  <div id="fb-root"></div>
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 </head>
 
 <body>
@@ -48,6 +61,36 @@
             ),
         ),
        // '<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+       
+  
+ ' <a class="pull-right" href="https://www.facebook.com/pages/Optima-Egypt/235389403207417"> <img alt="f"
+                                        src="http://www.teradata.com/Images/facebook_icon.png" 
+
+                                        style="height:15px; margin-top: 77%;">
+                                </a> ',
+
+                                ' <a class="pull-right" href="https://twitter.com/AMS_Sanad"> <img alt="t"
+                                        src="http://2.bp.blogspot.com/-AuhT5FmpzvM/T6qAbDwQrFI/AAAAAAAAOyM/5PFxvxqNFsM/s1600/twitter_icon+%281%29.jpg" 
+
+                                        style="height:20px; margin-top: 33%;margin-right:30%">
+                                </a> ',
+
+                                
+
+' <a class="pull-right" href="http://www.google.co.uk/#hl=en&sclient=psy-ab&q=Ameda+Breastfeeding&oq=Ameda+Breastfeeding&gs_l=hp.3..0l4.8597.29603.0.29736.31.17.4.7.7.5.713.5328.2-11j3j2j0j1.17.0.les%3B..0.0...1c.1.BzeR-_czNYQ&pbx=1&bav=on.2,or.r_gc.r_pw.r_qf.&fp=4df528e4659d284e&bpcl=35277026&biw=1317&bih=643"> <img alt="g"
+                                        src="http://icons.iconarchive.com/icons/deleket/social-bookmark/24/Google-icon.png" 
+
+                                        style="height:15px; margin-top: 55%; margin-right:30%">
+                                </a> ',
+
+
+
+
+    
+//'<div> <a href="https://twitter.com/amssanad" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @amssanad</a></div>',
+  
+//'<div style = "margin-top:1%" class="fb-like" data-href="https://www.facebook.com/pages/Optima-Egypt/235389403207417" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>',
+        
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
@@ -74,6 +117,7 @@
                    	
                      
                 )),
+
 
                 array('label'=>'Welcome, ' .Yii::app()->user->name ,'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
                     array('label'=>'Profile', 'url'=>'index.php?r=user/view&id='.Yii::app()->user->id),
@@ -128,7 +172,7 @@
                                             
                                                    ));
 	    ?>
-      </div>
+  </div>
 		<br/>
 
 
@@ -203,11 +247,20 @@
 </br>
 
 
+
+
+
+
 <div align="center">
-	<div class="clear"></div>
-         <a href="https://www.facebook.com/pages/OptimaEgypt/235389403207417">
-         <img src="http://png-3.findicons.com/files/icons/2184/hand_drawn_social/64/facebook.png" /> </a>
-       </br>
+<div style="margin-bottom:10px">
+<div class="fb-like" data-href="https://www.facebook.com/pages/Optima-Egypt/235389403207417" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
+</div>
+</div>
+
+
+<div align="center">
+  <div class="clear"></div>
+     </br>
 		Copyright &copy; <?php echo date('Y'); ?> TeraSoft.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
