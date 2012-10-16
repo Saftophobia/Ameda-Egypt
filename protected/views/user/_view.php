@@ -30,7 +30,22 @@
 
 
 	<div class="span4">
-	<?php echo CHtml::image(User::returnimageslocation($data->id)," No image available"); ?>
+	
+<?php
+	if(User::returnimageslocation($data->id) != null)
+	{
+		echo CHtml::image(User::returnimageslocation($data->id));
+	}else
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
+
+
+
+
 	</div>
 	
 

@@ -16,7 +16,26 @@ if(Yii::app()->user->id==$model->id)
 
 <h1><?php echo $model->first_name; ?> <?php echo $model->last_name; ?></h1>
 <div>
-<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"User's image "); ?></a>
+
+	
+<?php if($model->getFileUrl('normal')!= null): ?>
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal')); ?></a> 
+
+<?php endif?>
+
+
+
+<?php
+
+	
+	if(is_null($model->getFileUrl('normal')))
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
+	
 </div>
 <br />
 <br />
