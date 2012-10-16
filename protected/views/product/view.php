@@ -74,7 +74,30 @@ if(Yii::app()->user->checkAccess('admin'))
 <br />
 <br />
 <br />
-<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal'),"Product's image "); ?></a>
+
+
+<?php if($model->getFileUrl('normal')!= null): ?>
+<a href=<?php echo $model->getFileUrl('large')?> ><?php echo CHtml::image($model->getFileUrl('normal')); ?></a> 
+
+<?php endif?>
+
+
+
+<?php
+
+	
+	if(is_null($model->getFileUrl('normal')))
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
+	
+
+
+
+
 <br />
 <br />
 <br />

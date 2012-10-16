@@ -43,7 +43,18 @@
 </div>
 <div class="span4">
 
-	<?php echo CHtml::image(Product::returnimageslocation($data->id)," No image available"); ?>
+	<?php
+	if(Product::returnimageslocation($data->id) != null)
+	{
+		echo CHtml::image(Product::returnimageslocation($data->id));
+	}else
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
+	
 	<br />
 
 </div>
