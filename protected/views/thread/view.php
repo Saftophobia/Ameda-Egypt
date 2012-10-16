@@ -39,8 +39,24 @@ else
 <div style="font-size: 30px; font-weight:bold; ">
 <?php $user=User::model()->findByPk($model->user_id);?>
 <br/>
-<?php echo CHtml::image($user->getFileUrl('normal'),"User's image "); ?>
 
+<?php if($user->getFileUrl('normal')!= null): ?>
+<a href=<?php echo $user->getFileUrl('large')?> ><?php echo CHtml::image($user->getFileUrl('normal')); ?></a> 
+
+<?php endif?>
+
+
+
+<?php
+
+	
+	if(is_null($user->getFileUrl('normal')))
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
 <br/>
 <br/>
 <?php echo CHtml::link($user->username,array('/user/view','id'=>$model->user_id)); ?>

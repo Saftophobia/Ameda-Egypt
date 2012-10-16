@@ -12,7 +12,26 @@ $user=User::model()->findByPk($data[$i]->user_id);
 <td style="word-wrap:break-word;max-width:200px;min-width:200px;background-color:#e9e9e9 ;vertical-align:top;width: 200px; height: 150px;">
 <div style='color: black;font-size:12px;text-align: left;'>
 <div style="text-align:center;margin-top:20px">
-<?php echo CHtml::image($user->getFileUrl('normal'),"User's image "); ?>
+
+
+	
+<?php if($user->getFileUrl('normal')!= null): ?>
+<a href=<?php echo $user->getFileUrl('large')?> ><?php echo CHtml::image($user->getFileUrl('normal')); ?></a> 
+
+<?php endif?>
+
+
+
+<?php
+
+	
+	if(is_null($user->getFileUrl('normal')))
+	{
+		echo CHtml::image('images/defaults/noimg.gif',' No image available');
+	
+	}
+
+	?>
 </div>
 <br/ >
 <div style="font-size: 30px; font-weight:bold;text-align:center ">
